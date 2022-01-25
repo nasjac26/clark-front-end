@@ -10,6 +10,7 @@ import ProductContainer from "./components/ProductContainer";
 function App() {
   const [reload, setReload] = useState(false)
   const [user, setUser ] = useState("");
+  const [productList, setProductList] = useState([])
 
 
   useEffect(() => {
@@ -21,6 +22,19 @@ function App() {
     });
   }, [reload]);
 
+   //fetching from api inventory
+  useEffect(() => {
+    fetch("http://localhost:3000/hair_extensions")
+    .then(response => response.json())
+    .then(data => checkIfProductsExists(data))
+}, []);
+
+function checkIfProductsExists(data) {
+    if (!!data) {
+        setProductList(data)
+    }
+}
+
 
   return (
     <BrowserRouter>
@@ -30,7 +44,7 @@ function App() {
           <Route path="/" element={<Home />}/>
           <Route path="/signup" element={<Signup />}/>
           <Route path="/signin" element={<Signin />}/>
-          <Route path="/products" element={<ProductContainer />}/>
+          <Route path="/products" element={<ProductContainer productList={productList} />}/>
 
         </Routes>
       </div>
