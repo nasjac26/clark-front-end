@@ -3,7 +3,7 @@ import whitelogo from '../assets/white-logo.png'
 
 function Signin() {
     return (
-        <div className='signup'>
+        <div className="">
             <div>
                 <img style={{ maxWidth: 200 }} className="rounded mt-5 mx-auto d-block" src={whitelogo}></img>
             </div>
@@ -13,7 +13,7 @@ function Signin() {
             </div>
             
             {/* form container */}
-            <div style={{ backgroundColor: "#eed393" }} className="container rounded">
+            <div style={{ backgroundColor: "#eed393" }} className="container rounded mt-5">
                 <form>
                     <div className="rounded p-2 mb-3">
                         <label className="form-label">Email address</label>

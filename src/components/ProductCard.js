@@ -7,10 +7,10 @@ import Col from 'react-bootstrap/Col'
 
 function ProductCard(props) {
     return (
-        <Card className="ms-3 mt-5 p-1" style={{ width: '30rem', backgroundColor: "grey" }}>
+        <Card className="ms-3 mt-5 p-1 mobile-cards">
             <Row>
                 <Col>
-                    <Card.Img className="img-fluid" src="https://picsum.photos/780/1000" />
+                    <Card.Img className="img-fluid" src="https://picsum.photos/1100/2200" />
                 </Col>
                 <Col>
                     <Card.Body>
@@ -27,7 +27,17 @@ function ProductCard(props) {
                         <Card.Text>
                             Left in Stock: {props.stock}
                         </Card.Text>
-                        <Button variant="warning">Go somewhere</Button>
+                        <button
+                            className="snipcart-add-item"
+                            data-item-id={props.id}
+                            data-item-name={props.name}
+                            data-item-price="13"
+                            data-item-weight="20"
+                            data-item-description="Some fresh bacon">
+                                Add to Cart
+                        </button>
+
+    
                     </Card.Body>
                 </Col>
             </Row>

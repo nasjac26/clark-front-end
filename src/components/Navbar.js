@@ -43,13 +43,14 @@ const navigate = useNavigate();
     
     return ( 
 
-
-        <div className="navbar justify-content-center navbar-light bg-dark">
-            <NavLink className="btn btn-outline-warning m-3" to="/">Clark E Hair</NavLink>
-            <NavLink className="btn btn-secondary m-3" to="/products">Our Products</NavLink>              
-            {user ? showProfileButton() : null}
-            {!user ? showSignupButton() : null}
-            {!user ? showLoginButton() : showLogoutButton()}
+        <div className="container-fluid">
+            <div className="navbar justify-content-center navbar-light bg-dark">
+                <NavLink className="btn btn-outline-warning m-3" to="/">Clark E Hair</NavLink>
+                <NavLink className="btn btn-secondary m-3" to="/products">Shop</NavLink>              
+                {user ? showProfileButton() : null}
+                {!user ? showSignupButton() : null}
+                {!user ? showLoginButton() : showLogoutButton()}
+            </div>
         </div>
 
     );

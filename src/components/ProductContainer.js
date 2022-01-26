@@ -13,6 +13,7 @@ function ProductContainer({productList}) {
                     <Col>
                         <ProductCard 
                             key={product.id}
+                            id={product.id}
                             name={product.name}
                             color={product.color}
                             length={product.length}
@@ -29,7 +30,7 @@ function ProductContainer({productList}) {
     
     
     return (
-        <div className="ms-4">
+        <div className="container-fluid">
             <Row>
             {productListFactory()}   
             </Row>     
