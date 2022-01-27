@@ -27,7 +27,7 @@ function ProductCard(props) {
                         <Card.Text>
                             Left in Stock: {props.stock}
                         </Card.Text>
-                        <button
+                        <Button
                             className="snipcart-add-item"
                             data-item-id={props.id}
                             data-item-name={props.name}
@@ -35,7 +35,7 @@ function ProductCard(props) {
                             data-item-weight="20"
                             data-item-description="Some fresh bacon">
                                 Add to Cart
-                        </button>
+                        </Button>
 
     
                     </Card.Body>

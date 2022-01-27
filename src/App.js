@@ -5,6 +5,7 @@ import Home from './components/Home'
 import Navbar from './components/Navbar'
 import Signup from './components/Signup'
 import Signin from './components/Signin'
+import AdminTools from "./components/AdminTools";
 import ProductContainer from "./components/ProductContainer";
 
 function App() {
@@ -29,6 +30,8 @@ function App() {
     .then(data => checkIfProductsExists(data))
 }, []);
 
+
+
 function checkIfProductsExists(data) {
     if (!!data) {
         setProductList(data)
@@ -45,6 +48,7 @@ function checkIfProductsExists(data) {
           <Route path="/signup" element={<Signup />}/>
           <Route path="/signin" element={<Signin />}/>
           <Route path="/products" element={<ProductContainer productList={productList} />}/>
+          <Route path="/admin-tools" element={<AdminTools productList={productList} />}/>
 
         </Routes>
       </div>

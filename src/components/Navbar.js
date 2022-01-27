@@ -50,6 +50,8 @@ const navigate = useNavigate();
                 {user ? showProfileButton() : null}
                 {!user ? showSignupButton() : null}
                 {!user ? showLoginButton() : showLogoutButton()}
+                <NavLink className="btn btn-secondary m-3" to="/admin-tools">Admin Tools</NavLink>              
+
             </div>
         </div>
 
