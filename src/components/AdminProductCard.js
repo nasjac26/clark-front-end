@@ -26,8 +26,8 @@ function AdminProductCard(props) {
             }
             
         });
-    
-        navigate('/');
+        alert("Stock updated");   
+        window.location.reload(false);
     }
 
 
@@ -35,11 +35,9 @@ function AdminProductCard(props) {
         return (
         <Card className="ms-3 mt-5 p-1 mobile-cards">
             <Row>
-                <Col>
-                    <Card.Img className="img-fluid" src="https://picsum.photos/1100/2200" />
-                </Col>
-                <Col>
-                    <Card.Body>
+                <Card.Body>
+                    <div>{props.name}</div>
+
                     <form onSubmit={handleSubmit}>
                         <div class="mb-3">
                             <label htmlfor="username" class="form-label">Stock Count</label>
@@ -51,14 +49,10 @@ function AdminProductCard(props) {
                                 onChange={(event) => setStockCount(event.target.value)}
                                 
                             />
-                        </div>
-                      
-                        <button type="submit" class="btn btn-primary">Login</button>
+                        </div> 
+                        <button type="submit" class="btn btn-dark">Update Stock</button>
                     </form>
-
-    
-                    </Card.Body>
-                </Col>
+                </Card.Body>
             </Row>
         </Card>
     )

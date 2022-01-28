@@ -7,7 +7,7 @@ import AdminProductCard from './AdminProductCard';
 import Col from 'react-bootstrap/Col'
 
 
-function AdminContainer({productList}) {
+function AdminStock({productList}) {
 
     const productListFactory = () => {
         return productList.map(product => {
@@ -41,4 +41,4 @@ function AdminContainer({productList}) {
     )
 }
 
-export default AdminContainer;
+export default AdminStock;

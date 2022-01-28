@@ -3,7 +3,7 @@ import whitelogo from '../assets/white-logo.png'
 
 function Signin() {
     return (
-        <div className="">
+        <div className="container">
             <div>
                 <img style={{ maxWidth: 200 }} className="rounded mt-5 mx-auto d-block" src={whitelogo}></img>
             </div>
@@ -23,12 +23,7 @@ function Signin() {
                     <div className="p-2 mb-3">
                         <label className="form-label">Password</label>
                         <input type="password" className="form-control"></input>
-                    </div>
-                    <div className="p-2 mb-3">
-                        <label className="form-label">Password Confirmation</label>
-                        <input type="passwordConfirmation" className="form-control"></input>
-                    </div>
-                    
+                    </div>  
                     <button type="submit" className="m-3 btn btn-dark">Submit</button>
                 </form>
             </div>

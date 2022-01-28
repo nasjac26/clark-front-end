@@ -28,7 +28,11 @@ function Signup() {
                         <label className="form-label">Password Confirmation</label>
                         <input type="passwordConfirmation" className="form-control"></input>
                     </div>
-                    
+                    <label className="form-label ps-2">Submit Licence for Approval</label>
+                    <div class="input-group mb-3">
+                        <label class="input-group-text" for="inputGroupFile01">Upload</label>
+                        <input type="file" class="form-control" id="inputGroupFile01"></input>
+                    </div>   
                     <button type="submit" className="m-3 btn btn-dark">Submit</button>
                 </form>
             </div>
