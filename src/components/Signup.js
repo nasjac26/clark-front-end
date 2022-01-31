@@ -1,7 +1,33 @@
-import React from 'react'
+import React from 'react';
+import { useState } from 'react';
 import whitelogo from '../assets/white-logo.png'
 
 function Signup() {
+    // const [baseImage, setBaseImage] = useState("");
+    
+    //converting image to base64. ty Sam Lama
+    // const uploadImage = async (e) => {
+    //     const file = e.target.files[0];
+    //     const base64 = await convertBase64(file);
+    //     setBaseImage(baseImage);
+    //     console.log(base64)
+    // };
+    
+    // const convertBase64 = (file) => {
+    //     return new Promise((resolve, reject) => {
+    //         const fileReader = new FileReader();
+    //         fileReader.readAsDataURL(file);
+    
+    //         fileReader.onload = () => {
+    //             resolve(fileReader.result);
+    //         };
+
+    //         fileReader.onerror = (error) => {
+    //             reject(error);
+    //         };
+    //     });
+    //     };
+    
     return (
         <div className='signup'>
             <div>
@@ -14,7 +40,7 @@ function Signup() {
             
             {/* form container */}
             <div style={{ backgroundColor: "#eed393" }} className="container rounded">
-                <form>
+                <form >
                     <div className="rounded p-2 mb-3">
                         <label className="form-label">Email address</label>
                         <input type="email" className="form-control"></input>
@@ -26,11 +52,10 @@ function Signup() {
                     </div>
                     <div className="p-2 mb-3">
                         <label className="form-label">Password Confirmation</label>
-                        <input type="passwordConfirmation" className="form-control"></input>
+                        <input type="password" className="form-control"></input>
                     </div>
                     <label className="form-label ps-2">Submit Licence for Approval</label>
                     <div class="input-group mb-3">
-                        <label class="input-group-text" for="inputGroupFile01">Upload</label>
                         <input type="file" class="form-control" id="inputGroupFile01"></input>
                     </div>   
                     <button type="submit" className="m-3 btn btn-dark">Submit</button>

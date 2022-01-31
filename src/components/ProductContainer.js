@@ -1,8 +1,14 @@
 import React from 'react';
 import { useState, useEffect } from "react";
 import ProductCard from './ProductCard';
+import Search from './Search'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
+
+
+
+
+
 function ProductContainer({productList}) {
     console.log("test", productList)
 
@@ -11,6 +17,7 @@ function ProductContainer({productList}) {
             return (
                 
                     <Col>
+                        <Search />
                         <ProductCard 
                             key={product.id}
                             id={product.id}
