@@ -1,44 +1,40 @@
-import React from 'react';
+import React from "react";
 import { useState } from "react";
-import ProductCard from './ProductCard';
+import ToolCard from './ToolCard';
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 
-
-
-
-
-function ProductContainer({ productList, setProductList }) {
+function ToolsContainer({ toolList, setToolList }) {
     const [searchInput, setSearchInput] = useState('');
     const [filteredResults, setFilteredResults] = useState([]);
 
     //using user search to make a filtered array to map through
     const searchItems = (searchValue) => {
         setSearchInput(searchValue)
-        const filteredData = productList.filter((item) => {
+        const filteredData = toolList.filter((item) => {
             return Object.values(item).join('').toLowerCase().includes(searchInput.toLowerCase())
         })
         setFilteredResults(filteredData)
     }
 
 
-    //Using an if/else to say if its blank render all product and a search exists do th
-    const productListFactory = () => {
+    //Using an if/else to say if its blank render all tool and a search exists do th
+    const toolListFactory = () => {
         if (searchInput !== ""){
-            return filteredResults.map(product => {
+            return filteredResults.map(tool => {
                 return (
                     
                         <Col>
                             {console.log("searching")}
-                            <ProductCard 
-                                key={product.id}
-                                id={product.id}
-                                name={product.name}
-                                color={product.color}
-                                length={product.length}
-                                price={product.price}
-                                stock={product.stock}
-                                picture={product.picture}
+                            <ToolCard 
+                                key={tool.id}
+                                id={tool.id}
+                                name={tool.name}
+                                color={tool.color}
+                                length={tool.length}
+                                price={tool.price}
+                                stock={tool.stock}
+                                picture={tool.picture}
                             />
                         </Col>
                     
@@ -46,20 +42,20 @@ function ProductContainer({ productList, setProductList }) {
             }
         )
     } else {
-        return productList.map(product => {
+        return toolList.map(tool => {
             return (
                     <Col>
                                         {console.log("not searching")}
 
-                        <ProductCard 
-                            key={product.id}
-                            id={product.id}
-                            name={product.name}
-                            color={product.color}
-                            length={product.length}
-                            price={product.price}
-                            stock={product.stock}
-                            picture={product.picture}
+                        <ToolCard 
+                            key={tool.id}
+                            id={tool.id}
+                            name={tool.name}
+                            color={tool.color}
+                            length={tool.length}
+                            price={tool.price}
+                            stock={tool.stock}
+                            picture={tool.picture}
                         />
                     </Col>
                 
@@ -80,7 +76,7 @@ function ProductContainer({ productList, setProductList }) {
             <div className="container-fluid">
             
             <Row>
-                {productListFactory()}   
+                {toolListFactory()}   
             </Row>     
         </div>
         </div>
@@ -88,5 +84,6 @@ function ProductContainer({ productList, setProductList }) {
     )
 }
 
+export default ToolsContainer;
 
-export default ProductContainer;
+

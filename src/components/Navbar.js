@@ -29,29 +29,16 @@ const navigate = useNavigate();
         );
         }
 
-    function showProfileButton() {
-        return (
-            <NavLink className="btn btn-secondary m-3 nav-item" to="/profile">Log a Game Session!</NavLink>
-        )
-    }
-
-
-
-
-    
-    
-    
     return ( 
 
         <div className="container-fluid">
             <div className="navbar justify-content-center navbar-light bg-dark">
                 <NavLink className="btn btn-outline-warning m-3" to="/">Clark E Hair</NavLink>
-                <NavLink className="btn btn-secondary m-3" to="/products">Shop</NavLink>              
-                {user ? showProfileButton() : null}
+                <NavLink className="btn btn-secondary m-3" to="/products">Shop Hair Extensions</NavLink>
+                <NavLink className="btn btn-secondary m-3" to="/tools">Shop Tools</NavLink>              
                 {!user ? showSignupButton() : null}
                 {!user ? showLoginButton() : showLogoutButton()}
-                <NavLink className="btn btn-secondary m-3" to="/admin-tools">Admin Tools</NavLink>              
-
+                <NavLink className="btn btn-secondary m-3" to="/admin-tools">Admin Tools</NavLink>
             </div>
         </div>
 

@@ -7,6 +7,7 @@ import Signup from './components/Signup'
 import Signin from './components/Signin'
 import AdminTools from "./components/AdminTools";
 import ProductContainer from "./components/ProductContainer";
+import ToolsContainer from "./components/ToolsContainer";
 
 function App() {
   const [reload, setReload] = useState(false)
@@ -47,8 +48,10 @@ function checkIfProductsExists(data) {
           <Route path="/" element={<Home />}/>
           <Route path="/signup" element={<Signup />}/>
           <Route path="/signin" element={<Signin />}/>
-          <Route path="/products" element={<ProductContainer productList={productList} />}/>
-          <Route path="/admin-tools" element={<AdminTools productList={productList} />}/>
+          <Route path="/products" element={<ProductContainer productList={productList} setProductList={setProductList} />}/>
+          <Route path="/tools" element={<ToolsContainer toolList={productList} setToolList={setProductList} />}/>
+
+          <Route path="/admin-tools" element={<AdminTools productList={productList} setProductList={setProductList} />}/>
 
         </Routes>
       </div>
