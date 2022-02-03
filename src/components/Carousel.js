@@ -3,10 +3,12 @@ import blacklogo from '../assets/black-logo.png'
 import whitelogo from '../assets/white-logo.png'
 
 
-function Carousel() {
+function Carousel(props) {
     return (
         <div className="container">
-            <div>Test</div>
+            <div>
+                <h1>Welcome, {props.email}</h1>
+            </div>
             <div className="container">
                 <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner">

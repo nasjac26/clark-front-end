@@ -10,7 +10,7 @@ function ToolCard(props) {
         <Card className="ms-3 mt-5 p-1 mobile-cards">
             <Row>
                 <Col>
-                    <Card.Img className="img-fluid" src="https://picsum.photos/1100/2200" />
+                    <Card.Img className="img-thumbnail" src={props.picture} />
                 </Col>
                 <Col>
                     <Card.Body>
@@ -19,15 +19,13 @@ function ToolCard(props) {
                             {props.color}
                         </Card.Text>
                         <Card.Text>
-                            {props.length} Inches
-                        </Card.Text>
-                        <Card.Text>
                             ${props.price}
                         </Card.Text>
                         <Card.Text>
                             Left in Stock: {props.stock}
                         </Card.Text>
                         <Button
+                            variant="dark"
                             className="snipcart-add-item"
                             data-item-id={props.id}
                             data-item-name={props.name}

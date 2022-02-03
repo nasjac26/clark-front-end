@@ -13,6 +13,8 @@ function App() {
   const [reload, setReload] = useState(false)
   const [user, setUser ] = useState("");
   const [productList, setProductList] = useState([])
+  const [isSignedIn, setIsSignedIn] = useState(false)
+  const [toolList, setToolList] = useState([])
 
 
   useEffect(() => {
@@ -24,32 +26,46 @@ function App() {
     });
   }, [reload]);
 
-   //fetching from api inventory
+   //fetching hair extensions from api inventory
   useEffect(() => {
-    fetch("http://localhost:3000/hair_extensions")
+    fetch("http://localhost:3001/hair_extensions")
     .then(response => response.json())
     .then(data => checkIfProductsExists(data))
 }, []);
 
+   //fetching hair extensions from api inventory
+  useEffect(() => {
+    fetch("http://localhost:3001/tools")
+    .then(response => response.json())
+    .then(data => checkIfToolsExists(data))
+  }, []);
 
+
+
+function checkIfToolsExists(data) {
+    if (!!data) {
+        setToolList(data)
+    }
+}
 
 function checkIfProductsExists(data) {
-    if (!!data) {
-        setProductList(data)
-    }
+  if (!!data) {
+      setProductList(data)
+  }
 }
 
 
   return (
     <BrowserRouter>
-      <Navbar />
+      <Navbar  user={user} setUser={setUser}/>
       <div>
         <Routes>
-          <Route path="/" element={<Home />}/>
+          <Route path="/" element={<Home user={user} />}/>
           <Route path="/signup" element={<Signup />}/>
-          <Route path="/signin" element={<Signin />}/>
-          <Route path="/products" element={<ProductContainer productList={productList} setProductList={setProductList} />}/>
-          <Route path="/tools" element={<ToolsContainer toolList={productList} setToolList={setProductList} />}/>
+          <Route path="/signin" element={<Signin setUser={setUser} user={user} isSignedIn={isSignedIn} setIsSignedIn={setIsSignedIn} />}/>
+          {/* Disabled until ready to sell */}
+          {/* <Route path="/products" element={<ProductContainer productList={productList} setProductList={setProductList} />}/> */}
+          <Route path="/tools" element={<ToolsContainer toolList={toolList} setToolList={setToolList} />}/>
 
           <Route path="/admin-tools" element={<AdminTools productList={productList} setProductList={setProductList} />}/>
 

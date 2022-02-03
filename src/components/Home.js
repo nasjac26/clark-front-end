@@ -1,9 +1,9 @@
 import Carousel from "./Carousel";
 
-function Home() {
+function Home(props) {
     return (
         <div>
-            <Carousel />
+            <Carousel user={props.user} />
         </div>
     )
 }

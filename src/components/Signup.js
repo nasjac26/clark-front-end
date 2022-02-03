@@ -3,30 +3,8 @@ import { useState } from 'react';
 import whitelogo from '../assets/white-logo.png'
 
 function Signup() {
-    // const [baseImage, setBaseImage] = useState("");
-    
-    //converting image to base64. ty Sam Lama
-    // const uploadImage = async (e) => {
-    //     const file = e.target.files[0];
-    //     const base64 = await convertBase64(file);
-    //     setBaseImage(baseImage);
-    //     console.log(base64)
-    // };
-    
-    // const convertBase64 = (file) => {
-    //     return new Promise((resolve, reject) => {
-    //         const fileReader = new FileReader();
-    //         fileReader.readAsDataURL(file);
-    
-    //         fileReader.onload = () => {
-    //             resolve(fileReader.result);
-    //         };
 
-    //         fileReader.onerror = (error) => {
-    //             reject(error);
-    //         };
-    //     });
-    //     };
+    
     
     return (
         <div className='signup'>
