@@ -44,13 +44,13 @@ function Signin({ user, setUser, setIsSignedIn, isSignedIn }) {
                 <img style={{ maxWidth: 200 }} className="rounded mt-5 mx-auto d-block" src={whitelogo}></img>
             </div>
             <div className="container text-white m-5 mx-auto">
-                <p className="text-center">Signup to register for industry discounts</p>
+                <p className="text-center"></p>
 
             </div>
             
             {/* form container */}
-            <div className="Login">
-                <Form onSubmit={handleSubmit}>
+            <div className="Login container p-3 rounded" style={{ backgroundColor: "#eed393" }}>
+                <Form style={{ backgroundColor: "#eed393" }} onSubmit={handleSubmit}>
                     <Form.Group size="lg" controlId="email">
                     <Form.Label>Email</Form.Label>
                     <Form.Control
@@ -68,7 +68,7 @@ function Signin({ user, setUser, setIsSignedIn, isSignedIn }) {
                         onChange={(e) => setPassword(e.target.value)}
                     />
                     </Form.Group>
-                    <Button block size="lg" type="submit" disabled={!validateForm()}>
+                    <Button block size="lg" variant="dark" type="submit" disabled={!validateForm()} className='mt-3'>
                     Login
                     </Button>
                 </Form>

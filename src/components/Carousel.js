@@ -4,22 +4,24 @@ import whitelogo from '../assets/white-logo.png'
 
 
 function Carousel(props) {
+    console.log(props, "props for user in Home")
+
     return (
         <div className="container">
-            <div>
-                <h1>Welcome, {props.email}</h1>
+            <div className="justify-content-center">
+                <h1>`Welcome, {props.user.email}`</h1>
             </div>
             <div className="container">
                 <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img src="https://picsum.photos/780/1000" class="d-block w-100" alt="..."></img>
+                            <img src="https://i.ibb.co/GkQbTSY/beads.jpg" class="d-block w-100" alt="..."></img>
                         </div>
                         <div class="carousel-item">
-                            <img src="https://picsum.photos/780/1000" class="d-block w-100" alt="..."></img>
+                            <img src="https://i.ibb.co/GkQbTSY/beads.jpg" class="d-block w-100" alt="..."></img>
                         </div>
                         <div class="carousel-item">
-                            <img src="https://picsum.photos/780/1000" class="d-block w-100" alt="..."></img>
+                            <img src="https://i.ibb.co/GkQbTSY/beads.jpg" class="d-block w-100" alt="..."></img>
                         </div>
                     </div>
                     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">

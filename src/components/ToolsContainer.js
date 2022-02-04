@@ -22,31 +22,23 @@ function ToolsContainer({ toolList, setToolList }) {
     const toolListFactory = () => {
         if (searchInput !== ""){
             return filteredResults.map(tool => {
-                return (
-                    
+                    return (
                         <Col>
-                            {console.log("searching")}
                             <ToolCard 
                                 key={tool.id}
                                 id={tool.id}
                                 name={tool.name}
-                                color={tool.color}
-                                length={tool.length}
                                 price={tool.price}
                                 stock={tool.stock}
                                 picture={tool.picture}
                             />
                         </Col>
-                    
-                )
-            }
-        )
+                )}
+            )
     } else {
         return toolList.map(tool => {
             return (
                     <Col>
-                                        {console.log("not searching")}
-
                         <ToolCard 
                             key={tool.id}
                             id={tool.id}

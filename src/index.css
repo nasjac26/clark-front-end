@@ -21,7 +21,7 @@ body {
 and (min-device-width : 320px)
 and (max-device-width : 480px) {
 body {
-  background-color: blanchedalmond;
+  background-color: black;
 };
 .mobile-cards {
   background-color: wheat;

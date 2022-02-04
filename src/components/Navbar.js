@@ -10,7 +10,7 @@ const url = "http://localhost:3001/logout"
             setUser(null);
         }
         });
-    navigate('/');
+        navigate('/');
     }
 
     function showLoginButton() {
@@ -29,6 +29,12 @@ const url = "http://localhost:3001/logout"
             <NavLink className="btn btn-secondary m-3" to="/signup">Signup</NavLink>
         );
         }
+    function showAdminTools() {
+        return (
+        <NavLink className="btn btn-secondary m-3" to="/admin-tools">Admin Tools</NavLink>
+        );
+
+    }
 
     return ( 
 
@@ -40,7 +46,7 @@ const url = "http://localhost:3001/logout"
                 <NavLink className="btn btn-secondary m-3" to="/tools">Shop Tools</NavLink>              
                 {!user ? showSignupButton() : null}
                 {!user ? showLoginButton() : showLogoutButton()}
-                <NavLink className="btn btn-secondary m-3" to="/admin-tools">Admin Tools</NavLink>
+                {!user.admin === true ? null : showAdminTools()}
             </div>
         </div>
 

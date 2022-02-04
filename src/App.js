@@ -1,6 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useNavigate } from "react-router-dom";
 import Home from './components/Home'
 import Navbar from './components/Navbar'
 import Signup from './components/Signup'
@@ -15,16 +15,17 @@ function App() {
   const [productList, setProductList] = useState([])
   const [isSignedIn, setIsSignedIn] = useState(false)
   const [toolList, setToolList] = useState([])
+  const [inStockToolList, setInStockToolList] = useState([])
 
 
-  useEffect(() => {
-    // auto-login
-    fetch("/me").then((r) => {
-      if (r.ok) {
-        r.json().then((user) => setUser(user));
-      }
-    });
-  }, [reload]);
+  // useEffect(() => {
+  //   // auto-login
+  //   fetch("/me").then((r) => {
+  //     if (r.ok) {
+  //       r.json().then((user) => setUser(user));
+  //     }
+  //   });
+  // }, [reload]);
 
    //fetching hair extensions from api inventory
   useEffect(() => {
@@ -61,18 +62,17 @@ function checkIfProductsExists(data) {
       <div>
         <Routes>
           <Route path="/" element={<Home user={user} />}/>
-          <Route path="/signup" element={<Signup />}/>
+          <Route path="/signup" element={<Signup setUser={setUser} user={user} isSignedIn={isSignedIn} setIsSignedIn={setIsSignedIn} />}/>
           <Route path="/signin" element={<Signin setUser={setUser} user={user} isSignedIn={isSignedIn} setIsSignedIn={setIsSignedIn} />}/>
           {/* Disabled until ready to sell */}
           {/* <Route path="/products" element={<ProductContainer productList={productList} setProductList={setProductList} />}/> */}
           <Route path="/tools" element={<ToolsContainer toolList={toolList} setToolList={setToolList} />}/>
-
-          <Route path="/admin-tools" element={<AdminTools productList={productList} setProductList={setProductList} />}/>
+          <Route path="/admin-tools" element={<AdminTools user={user} toolList={toolList} setToolList={setToolList} />}/>
 
         </Routes>
       </div>
     </BrowserRouter>
   );
-}
+  }
 
 export default App;
