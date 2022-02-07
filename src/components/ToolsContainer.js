@@ -28,6 +28,7 @@ function ToolsContainer({ toolList, setToolList }) {
                                 key={tool.id}
                                 id={tool.id}
                                 name={tool.name}
+                                description={tool.description}
                                 price={tool.price}
                                 stock={tool.stock}
                                 picture={tool.picture}

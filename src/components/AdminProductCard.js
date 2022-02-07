@@ -27,7 +27,8 @@ function AdminProductCard(props) {
             
         });
         alert("Stock updated");   
-        window.location.reload(false);
+        navigate('/admin-tools');
+
     }
 
 

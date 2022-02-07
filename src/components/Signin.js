@@ -68,9 +68,10 @@ function Signin({ user, setUser, setIsSignedIn, isSignedIn }) {
                         onChange={(e) => setPassword(e.target.value)}
                     />
                     </Form.Group>
-                    <Button block size="lg" variant="dark" type="submit" disabled={!validateForm()} className='mt-3'>
+                    <Button block size="lg" variant="dark" type="submit" disabled={!validateForm()} className='m-2'>
                     Login
                     </Button>
+                    <a href="/signup">Signup</a>
                 </Form>
         </div>
             </div>

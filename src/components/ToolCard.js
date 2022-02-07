@@ -7,6 +7,10 @@ import Container from 'react-bootstrap/Container'
 function ToolCard(props) {
 
 
+    // const handleClick = (props) => {
+    //     return
+    // }
+
     return (
         <Card className="ms-3 mt-5 p-1 mobile-cards">
                     <Card.Img className="img-thumbnail" src={props.picture} />
@@ -22,8 +26,15 @@ function ToolCard(props) {
                                 data-item-id={props.id}
                                 data-item-name={props.name}
                                 data-item-price={props.price}
-                                data-item-description="Some fresh bacon">
+                                data-item-description={props.description}>
                                     Add to Cart
+                            </Button>
+                            <Button
+                                variant="warning"
+                                className="ms-1"
+                                // onClick={handleClick}
+                            >
+                                View More
                             </Button>                            
                         
                         </Container>

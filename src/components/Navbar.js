@@ -11,6 +11,7 @@ const url = "http://localhost:3001/logout"
         }
         });
         navigate('/');
+        window.location.reload();
     }
 
     function showLoginButton() {
@@ -39,12 +40,13 @@ const url = "http://localhost:3001/logout"
     return ( 
 
         <div className="container-fluid">
-            <div className="navbar justify-content-center navbar-light bg-dark">
-                <NavLink className="btn btn-outline-warning m-3" to="/">Clark E Hair</NavLink>
+            <div className="navbar justify-content-start navbar-light bg-dark">
+                <a class="navbar-brand" href="/">
+                    <img src="https://i.ibb.co/qsWm9xR/white-logo.png" alt="" width="100" height="80"></img>
+                </a>
                 {/* Disabled until ready to sell */}
                 {/* <NavLink className="btn btn-secondary m-3" to="/products">Shop Hair Extensions</NavLink> */}
                 <NavLink className="btn btn-secondary m-3" to="/tools">Shop Tools</NavLink>              
-                {!user ? showSignupButton() : null}
                 {!user ? showLoginButton() : showLogoutButton()}
                 {!user.admin === true ? null : showAdminTools()}
             </div>
@@ -54,3 +56,5 @@ const url = "http://localhost:3001/logout"
     }
 
 export default Navbar;
+
+// https://i.ibb.co/qsWm9xR/white-logo.png

@@ -18,7 +18,7 @@ function Carousel(props) {
                             <img src="https://i.ibb.co/GkQbTSY/beads.jpg" class="d-block w-100" alt="..."></img>
                         </div>
                         <div class="carousel-item">
-                            <img src="https://i.ibb.co/GkQbTSY/beads.jpg" class="d-block w-100" alt="..."></img>
+                            <img src="https://i.ibb.co/dMWYn26/tool-kit-logo.jpg" class="d-block w-100" alt="..."></img>
                         </div>
                         <div class="carousel-item">
                             <img src="https://i.ibb.co/GkQbTSY/beads.jpg" class="d-block w-100" alt="..."></img>
