@@ -25,11 +25,6 @@ const url = "http://localhost:3001/logout"
         );
     }
 
-    function showSignupButton() {
-        return (
-            <NavLink className="btn btn-secondary m-3" to="/signup">Signup</NavLink>
-        );
-        }
     function showAdminTools() {
         return (
         <NavLink className="btn btn-secondary m-3" to="/admin-tools">Admin Tools</NavLink>
@@ -41,7 +36,7 @@ const url = "http://localhost:3001/logout"
 
         <div className="container-fluid">
             <div className="navbar justify-content-start navbar-light bg-dark">
-                <a class="navbar-brand" href="/">
+                <a className="navbar-brand" href="/">
                     <img src="https://i.ibb.co/qsWm9xR/white-logo.png" alt="" width="100" height="80"></img>
                 </a>
                 {/* Disabled until ready to sell */}
@@ -56,5 +51,3 @@ const url = "http://localhost:3001/logout"
     }
 
 export default Navbar;
-
-// https://i.ibb.co/qsWm9xR/white-logo.png

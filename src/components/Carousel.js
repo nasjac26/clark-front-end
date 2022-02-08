@@ -4,7 +4,6 @@ import whitelogo from '../assets/white-logo.png'
 
 
 function Carousel(props) {
-    console.log(props, "props for user in Home")
 
     return (
         <div className="container">
