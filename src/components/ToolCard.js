@@ -4,16 +4,11 @@ import Card from 'react-bootstrap/Card'
 import Button from 'react-bootstrap/Button'
 import Container from 'react-bootstrap/Container'
 import { Link, Outlet } from "react-router-dom";
+import Product from "./Product";
 
 
 
 function ToolCard(props) {
-
-
-    // const handleClick = (props) => {
-    //     return
-    // }
-
 
     return (
         <div>
@@ -34,13 +29,15 @@ function ToolCard(props) {
                             data-item-description={props.description}>
                                 Add to Cart
                         </Button>
-                        <Link to={`/tools/${props.id}`}>View</Link>
-                        <Outlet />
+                        <Link to={`/tools/${props.id}`}> View
+                        </Link>
 
                     </Container>
                     
                 </Card.Body>
             </Card>
+            <Outlet />
+
         </div>
         
     )

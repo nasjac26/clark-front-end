@@ -6,15 +6,16 @@ import Navbar from './components/Navbar'
 import Signup from './components/Signup'
 import Signin from './components/Signin'
 import AdminTools from "./components/AdminTools";
-import Product from "./components/ProductContainer";
+import HairExtensionCard from "./components/HairExtensionCard";
 import ToolsContainer from "./components/ToolsContainer";
-import ProductContainer from "./components/ProductContainer";
+import HairExtensionContainer from "./components/HairExtensionContainer";
+import Product from "./components/Product"
 
 
 function App() {
   const [reload, setReload] = useState(false)
   const [user, setUser ] = useState("");
-  const [productList, setProductList] = useState([])
+  const [hairExtensionList, sethairextensionList] = useState([])
   const [isSignedIn, setIsSignedIn] = useState(false)
   const [toolList, setToolList] = useState([])
   const [inStockToolList, setInStockToolList] = useState([])
@@ -33,7 +34,7 @@ function App() {
   useEffect(() => {
     fetch("http://localhost:3001/hair_extensions")
     .then(response => response.json())
-    .then(data => checkIfProductsExists(data))
+    .then(data => checkIfHairProductsExists(data))
 }, []);
 
    //fetching tools from api inventory
@@ -51,9 +52,9 @@ function checkIfToolsExists(data) {
     }
 }
 
-function checkIfProductsExists(data) {
+function checkIfHairProductsExists(data) {
   if (!!data) {
-      setProductList(data)
+      sethairextensionList(data)
   }
 }
 
@@ -66,10 +67,10 @@ function checkIfProductsExists(data) {
         <Route path="/signup" element={<Signup setUser={setUser} user={user} isSignedIn={isSignedIn} setIsSignedIn={setIsSignedIn} />}/>
         <Route path="/signin" element={<Signin setUser={setUser} user={user} isSignedIn={isSignedIn} setIsSignedIn={setIsSignedIn} />}/>
         {/* Disabled until ready to sell */}
-        {/* <Route path="/products" element={<ProductContainer productList={productList} setProductList={setProductList} />}/> */}
+        {/* <Route path="/products" element={<ProductContainer hairExtensionList={hairExtensionList} sethairextensionList={sethairextensionList} />}/> */}
         <Route path="/tools" element={<ToolsContainer toolList={toolList} setToolList={setToolList} />}/>
         <Route path="/admin-tools" element={<AdminTools user={user} toolList={toolList} setToolList={setToolList} />}/>
-        <Route path="/tools/:id" element={<Product />} />
+        <Route path="/tools/:id" element={<Product toolList={toolList} />} />
 
       </Routes>
     </div>

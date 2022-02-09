@@ -1,17 +1,19 @@
 import React from 'react';
 import { useState, useEffect } from "react"
 import { useParams } from "react-router-dom"
+import Row from 'react-bootstrap/Row'
+import Col from 'react-bootstrap/Col'
 
-function Product() {
+function Product(props) {
     const [currentProduct, setCurrentProduct] = useState([])
     const { id } = useParams()
     
     useEffect(() => {
         getProduct()
-        }, [productId]);
+        }, [id]);
 
         const getProduct = () => {
-        fetch(`https:localhost:3001/tools/${id}`)
+        fetch(`http://localhost:3001/tools/${id}`)
             .then(r => r.json())
             .then((data) => setCurrentProduct(data))
         }
@@ -19,19 +21,13 @@ function Product() {
     
     return(
         <div>
-            <h3>Message </h3>
-            <h3>Message </h3>
+            <div className='container'>
+               <div className='container'>
+                
+                </div> 
+                <h1>{currentProduct.name} </h1>
 
-            <h3>Message </h3>
-
-            <h3>Message </h3>
-
-            <h3>Message </h3>
-            <h3>Message </h3>
-            <h3>Message </h3>
-            <h3>Message </h3>
-            <Outlet />
-
+            </div>
         </div>
     )
 }

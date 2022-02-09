@@ -4,7 +4,7 @@ import Button from 'react-bootstrap/Button'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 
-function ProductCard(props) {
+function HairExtensionCard(props) {
     return (
         <Card className="ms-3 mt-5 p-1 mobile-cards">
             <Row>
@@ -45,6 +45,6 @@ function ProductCard(props) {
     )
 }
 
-export default ProductCard;
+export default HairExtensionCard;
 
 

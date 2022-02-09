@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState, useEffect } from "react";
-import ProductCard from './ProductCard';
+import ProductCard from './HairExtensionCard';
 import Row from 'react-bootstrap/Row'
 
 import AdminProductCard from './AdminProductCard';

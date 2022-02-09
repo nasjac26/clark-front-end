@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState } from "react";
-import ProductCard from './ProductCard';
+import HairExtensionCard from './HairExtensionCard';
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 
@@ -8,37 +8,37 @@ import Col from 'react-bootstrap/Col'
 
 
 
-function ProductContainer({ productList, setProductList }) {
+function HairExtensionContainer({ hairextensionList, sethairextensionList }) {
     const [searchInput, setSearchInput] = useState('');
     const [filteredResults, setFilteredResults] = useState([]);
 
     //using user search to make a filtered array to map through
     const searchItems = (searchValue) => {
         setSearchInput(searchValue)
-        const filteredData = productList.filter((item) => {
+        const filteredData = hairextensionList.filter((item) => {
             return Object.values(item).join('').toLowerCase().includes(searchInput.toLowerCase())
         })
         setFilteredResults(filteredData)
     }
 
 
-    //Using an if/else to say if its blank render all product and a search exists do th
-    const productListFactory = () => {
+    //Using an if/else to say if its blank render all hairextension and a search exists do th
+    const hairextensionListFactory = () => {
         if (searchInput !== ""){
-            return filteredResults.map(product => {
+            return filteredResults.map(hairextension => {
                 return (
                     
                         <Col>
                             {console.log("searching")}
-                            <ProductCard 
-                                key={product.id}
-                                id={product.id}
-                                name={product.name}
-                                color={product.color}
-                                length={product.length}
-                                price={product.price}
-                                stock={product.stock}
-                                picture={product.picture}
+                            <HairExtensionCard 
+                                key={hairextension.id}
+                                id={hairextension.id}
+                                name={hairextension.name}
+                                color={hairextension.color}
+                                length={hairextension.length}
+                                price={hairextension.price}
+                                stock={hairextension.stock}
+                                picture={hairextension.picture}
                             />
                         </Col>
                     
@@ -46,20 +46,20 @@ function ProductContainer({ productList, setProductList }) {
             }
         )
     } else {
-        return productList.map(product => {
+        return hairextensionList.map(hairextension => {
             return (
                     <Col>
                                         {console.log("not searching")}
 
-                        <ProductCard 
-                            key={product.id}
-                            id={product.id}
-                            name={product.name}
-                            color={product.color}
-                            length={product.length}
-                            price={product.price}
-                            stock={product.stock}
-                            picture={product.picture}
+                        <HairExtensionCard 
+                            key={hairextension.id}
+                            id={hairextension.id}
+                            name={hairextension.name}
+                            color={hairextension.color}
+                            length={hairextension.length}
+                            price={hairextension.price}
+                            stock={hairextension.stock}
+                            picture={hairextension.picture}
                         />
                     </Col>
                 
@@ -80,7 +80,7 @@ function ProductContainer({ productList, setProductList }) {
             <div className="container-fluid">
             
             <Row>
-                {productListFactory()}   
+                {hairextensionListFactory()}   
             </Row>     
         </div>
         </div>
@@ -89,4 +89,4 @@ function ProductContainer({ productList, setProductList }) {
 }
 
 
-export default ProductContainer;
+export default HairExtensionContainer;
