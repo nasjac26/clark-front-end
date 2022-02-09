@@ -12,7 +12,7 @@ function ToolCard(props) {
 
     return (
         <div>
-            <Card className="ms-3 mt-5 p-1 mobile-cards">
+            <Card className="ms-3 mt-5 p-1 mobile-cards shadow bg-body rounded">
                 <Card.Img className="img-thumbnail" src={props.picture} />
                 <Card.Body className="">
                     <Card.Title className="d-flex justify-content-center">{props.name}</Card.Title>
@@ -29,9 +29,12 @@ function ToolCard(props) {
                             data-item-description={props.description}>
                                 Add to Cart
                         </Button>
-                        <Link to={`/tools/${props.id}`}> View
-                        </Link>
+                        
 
+                    </Container>
+                    <Container className="d-flex justify-content-center">
+                        <Link className="nav-link text-secondary" to={`/tools/${props.id}`}> View More
+                        </Link>
                     </Container>
                     
                 </Card.Body>

@@ -7,11 +7,8 @@ function Carousel(props) {
 
     return (
         <div className="container">
-            <div className="justify-content-center">
-                <h1>`Welcome, {props.user.email}`</h1>
-            </div>
-            <div className="container">
-                <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+            <div className="container shadow-lg bg-body rounded w-auto">
+                <div id="carouselExampleControls" class="carousel slide d-flex justify-content-center" data-bs-ride="carousel">
                     <div class="carousel-inner">
                         <div class="carousel-item active">
                             <img src="https://i.ibb.co/GkQbTSY/beads.jpg" class="d-block w-100" alt="..."></img>

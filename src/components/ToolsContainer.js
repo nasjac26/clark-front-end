@@ -60,7 +60,7 @@ function ToolsContainer({ toolList, setToolList }) {
     
     return (
         <div className='container'>
-            <div className='justify-content-end'>
+            <div className='d-flex justify-content-center rounded'>
                     <input icon='search'
                     placeholder='Search...'
                     onChange={(event) => searchItems(event.target.value)}

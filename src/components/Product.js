@@ -1,12 +1,13 @@
 import React from 'react';
 import { useState, useEffect } from "react"
 import { useParams } from "react-router-dom"
-import Row from 'react-bootstrap/Row'
-import Col from 'react-bootstrap/Col'
+import Button from "react-bootstrap/Button"
+
 
 function Product(props) {
     const [currentProduct, setCurrentProduct] = useState([])
     const { id } = useParams()
+    console.log(currentProduct)
     
     useEffect(() => {
         getProduct()
@@ -21,11 +22,26 @@ function Product(props) {
     
     return(
         <div>
-            <div className='container'>
-               <div className='container'>
-                
+            <div className='container d-flex pt-5 mt-5'>
+                <div className='container'>
+                    <img src={currentProduct.picture} alt="Picture of product" width="500" height="600" className='shadow-lg p-3 mb-5 bg-body rounded'></img>
                 </div> 
-                <h1>{currentProduct.name} </h1>
+                <div className='container bg-light p-5 m-5'>
+                    <h1>{currentProduct.name} </h1>
+                    <h3>${currentProduct.price} USD</h3>
+                    <p>{currentProduct.description} </p>
+                    <div className=' d-grid gap-2'>
+                        <Button
+                            variant="dark"
+                            className="snipcart-add-item d-flex justify-content-center"
+                            data-item-id={currentProduct.id}
+                            data-item-name={currentProduct.name}
+                            data-item-price={currentProduct.price}
+                            data-item-description={currentProduct.description}>
+                                Add to Cart
+                        </Button>
+                    </div>
+                </div> 
 
             </div>
         </div>
