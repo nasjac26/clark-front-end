@@ -16,15 +16,20 @@ body {
     width: 20rem;
   }
 
+  .product-cards {
+    background-color: #f9f0f2
+  }
+
 /* Smartphones (portrait and landscape) ----------- */
 @media only screen
 and (min-device-width : 320px)
 and (max-device-width : 480px) {
 body {
-  background-color: black;
+  background-color: #f9f0f2 ;
 };
-.mobile-cards {
-  background-color: wheat;
+.product-image {
+  width: 200px;
+  height: 300px;
 }
 }
 

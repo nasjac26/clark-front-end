@@ -7,17 +7,17 @@ function Carousel(props) {
 
     return (
         <div className="container">
-            <div className="container shadow-lg bg-body rounded w-auto">
-                <div id="carouselExampleControls" class="carousel slide d-flex justify-content-center" data-bs-ride="carousel">
+            <div className="container shadow-lg p-3 mb-5 bg-body rounded w-auto">
+                <div id="carouselExampleControls" class="carousel slide h" data-bs-ride="carousel">
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img src="https://i.ibb.co/GkQbTSY/beads.jpg" class="d-block w-100" alt="..."></img>
+                            <img src="https://i.ibb.co/GkQbTSY/beads.jpg" class="d-block w-75" alt="..."></img>
                         </div>
                         <div class="carousel-item">
-                            <img src="https://i.ibb.co/dMWYn26/tool-kit-logo.jpg" class="d-block w-100" alt="..."></img>
+                            <img src="https://i.ibb.co/dMWYn26/tool-kit-logo.jpg" class="d-block w-75" alt="..."></img>
                         </div>
                         <div class="carousel-item">
-                            <img src="https://i.ibb.co/GkQbTSY/beads.jpg" class="d-block w-100" alt="..."></img>
+                            <img src="https://i.ibb.co/GkQbTSY/beads.jpg" class="d-block" alt="..."></img>
                         </div>
                     </div>
                     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
