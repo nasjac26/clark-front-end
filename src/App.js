@@ -39,7 +39,7 @@ function App() {
 
    //fetching tools from api inventory
   useEffect(() => {
-    fetch("http://localhost:3001/tools")
+    fetch("https://clarks-backend.herokuapp.com/tools")
     .then(response => response.json())
     .then(data => checkIfToolsExists(data))
   }, []);
