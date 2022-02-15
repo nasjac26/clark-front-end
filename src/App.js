@@ -32,14 +32,14 @@ function App() {
 
    //fetching hair extensions from api inventory
   useEffect(() => {
-    fetch("http://clarks-backend.herokuapp.com/hair_extensions")
+    fetch("https://clarks-backend.herokuapp.com/hair_extensions")
     .then(response => response.json())
     .then(data => checkIfHairProductsExists(data))
 }, []);
 
    //fetching tools from api inventory
   useEffect(() => {
-    fetch("http://clarks-backend.herokuapp.com/tools")
+    fetch("https://clarks-backend.herokuapp.com/tools")
     .then(response => response.json())
     .then(data => checkIfToolsExists(data))
   }, []);
