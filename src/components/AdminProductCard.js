@@ -14,7 +14,7 @@ function AdminProductCard(props) {
     function handleSubmit(event) {
         event.preventDefault();
         setStockCount(event.target.value)
-        fetch(`https://clarks-backend.herokuapp.com/tools/${props.id}`, {
+        fetch(`http://localhost:3000/tools/${props.id}`, {
             method: "PATCH",
             headers: {
                 "Content-Type": "application/json",

@@ -10,6 +10,7 @@ import HairExtensionCard from "./components/HairExtensionCard";
 import ToolsContainer from "./components/ToolsContainer";
 import HairExtensionContainer from "./components/HairExtensionContainer";
 import Product from "./components/Product"
+import ClassContainer from "./components/ClassContainer";
 
 
 function App() {
@@ -19,30 +20,29 @@ function App() {
   const [isSignedIn, setIsSignedIn] = useState(false)
   const [toolList, setToolList] = useState([])
   const [inStockToolList, setInStockToolList] = useState([])
+  const [classList, setClassList] = useState("")
 
-
-  // useEffect(() => {
-  //   // auto-login
-  //   fetch("/me").then((r) => {
-  //     if (r.ok) {
-  //       r.json().then((user) => setUser(user));
-  //     }
-  //   });
-  // }, [reload]);
 
    //fetching hair extensions from api inventory
   useEffect(() => {
-    fetch("https://clarks-backend.herokuapp.com/hair_extensions")
+    fetch("http://localhost:3001/hair_extensions")
     .then(response => response.json())
     .then(data => checkIfHairProductsExists(data))
 }, []);
 
    //fetching tools from api inventory
   useEffect(() => {
-    fetch("https://clarks-backend.herokuapp.com/tools")
+    fetch("http://localhost:3001/tools")
     .then(response => response.json())
     .then(data => checkIfToolsExists(data))
   }, []);
+
+
+  useEffect(() => {
+      fetch("http://localhost:3001/events")
+      .then(response => response.json())
+      .then(data => setClassList(data))
+  }, [])
 
 
 
@@ -71,6 +71,7 @@ function checkIfHairProductsExists(data) {
         <Route path="/tools" element={<ToolsContainer toolList={toolList} setToolList={setToolList} />}/>
         <Route path="/admin-tools" element={<AdminTools user={user} toolList={toolList} setToolList={setToolList} />}/>
         <Route path="/tools/:id" element={<Product toolList={toolList} />} />
+        <Route path="/classes" element={<ClassContainer classList={classList} />} />
 
       </Routes>
     </div>

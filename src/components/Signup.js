@@ -15,7 +15,7 @@ function Signup({ setUser, setIsSignedIn }) {
         return email.length > 0 && password.length > 0 && password === passwordConfirmation
     }
 
-    let url = "https://clarks-backend.herokuapp.com/signup"
+    let url = "http://localhost:3001/signup"
 
     function handleSubmit(event) {
         event.preventDefault();
