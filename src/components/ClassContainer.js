@@ -4,11 +4,6 @@ import ClassCard from "./ClassCard";
 
 function ClassContainer({classList}) {
 
-  
-
-    console.log(classList)
-
-
     return(
         <div>
             <div className="container"><ClassInformation /></div>

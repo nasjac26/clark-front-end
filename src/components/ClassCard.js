@@ -20,7 +20,7 @@ const ClassCard = (props) => {
                             {e.date}
                         </Card.Text>
                         <Card.Text className="d-flex justify-content-center">
-                            {e.location.toUpperCase()}
+                            {e.location}
                         </Card.Text>
                         <Container className="d-flex justify-content-center">
                             <Button

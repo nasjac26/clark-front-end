@@ -41,7 +41,7 @@ function App() {
   useEffect(() => {
       fetch("http://localhost:3001/events")
       .then(response => response.json())
-      .then(data => setClassList(data))
+      .then(data => checkIfClassesExists(data))
   }, [])
 
 
@@ -55,6 +55,11 @@ function checkIfToolsExists(data) {
 function checkIfHairProductsExists(data) {
   if (!!data) {
       sethairextensionList(data)
+  }
+}
+function checkIfClassesExists(data) {
+  if (!!data) {
+      setClassList(data)
   }
 }
 

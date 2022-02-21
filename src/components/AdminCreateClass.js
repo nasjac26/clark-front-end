@@ -6,7 +6,7 @@ function AdminCreateClass() {
     const [ price, setPrice ] = useState("")
     const [ date, setDate ] = useState("")
     const [ location, setLocation ] = useState("")
-    const [seats, setSeats ] = useState("")
+    const [stock, setStock ] = useState("")
 
     let url = "http://localhost:3001/events"
 
@@ -18,7 +18,7 @@ function AdminCreateClass() {
             headers: {
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify({ name: name, date: date, price: price, location: location, description: "hello love" }),
+            body: JSON.stringify({ name: name, date: date, price: price, location: location, description: "hello love", stock: stock }),
         })
         .then(response => response.json())
         .then(data => console.log('Success:', data))
@@ -63,13 +63,13 @@ function AdminCreateClass() {
                         value={location}
                         onChange={(event) => setLocation(event.target.value)}
                     />
-                <label>Seats</label>
+                <label>Seats Available</label>
                     <input 
-                        type="text"
+                        type="number"
                         class="form-control"
                         id="createdEventSeatCount"
-                        value={seats}
-                        onChange={(event) => setSeats(event.target.value)}
+                        value={stock}
+                        onChange={(event) => setStock(event.target.value)}
                     />
             <button type="submit" className="btn btn-dark">Create Class</button>
             </form>
