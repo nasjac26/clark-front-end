@@ -29,7 +29,8 @@ function Signup({ setUser, setIsSignedIn }) {
             .then((response) => {
                 if (response.ok) {
                     response.json().then((user) => setUser(user))
-                    .then(setIsSignedIn(true));    
+                    .then(setIsSignedIn(true))
+                    .then(console.log(response))
             } else(console.log("something went wrong on signup"))
         });
         navigate('/');

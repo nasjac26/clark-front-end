@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Card from 'react-bootstrap/Card'
 import Row from 'react-bootstrap/Row'
-import Col from 'react-bootstrap/Col'
 import { useNavigate } from 'react-router-dom';
 
 
@@ -41,7 +40,7 @@ function AdminProductCard(props) {
 
                     <form onSubmit={handleSubmit}>
                         <div class="mb-3">
-                            <label htmlfor="username" class="form-label">Stock Count</label>
+                            <label htmlfor="stock" class="form-label">Stock Count</label>
                             <input 
                                 type="stockCount" 
                                 class="form-control" 
@@ -51,7 +50,7 @@ function AdminProductCard(props) {
                                 
                             />
                         </div> 
-                        <button type="submit" class="btn btn-dark">Update Stock</button>
+                        <button type="submit" className="btn btn-dark">Update Stock</button>
                     </form>
                 </Card.Body>
             </Row>

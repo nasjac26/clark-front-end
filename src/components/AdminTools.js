@@ -1,6 +1,7 @@
 import React from 'react';
 import AdminStock from './AdminStock';
 import AdminApproval from './AdminApproval';
+import AdminClassManager from './AdminClassManager';
 
 
 
@@ -13,7 +14,6 @@ import AdminApproval from './AdminApproval';
 function AdminTools(props) {
     
   const adminStatusString = props.user.admin.toString()
-  console.log(props.user)
   function renderAdminIfAuth() {
     if (adminStatusString === "true") {
       return (
@@ -22,6 +22,7 @@ function AdminTools(props) {
             <h1 className='d-flex justify-content-center'>Stock Manager</h1>
             <AdminStock productList={props.toolList} />
             <AdminApproval />
+            <AdminClassManager />
           </div>
             
         </div>
