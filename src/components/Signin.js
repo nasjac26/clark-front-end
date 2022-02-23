@@ -14,7 +14,7 @@ function Signin({ user, setUser, setIsSignedIn, isSignedIn }) {
         return email.length > 0 && password.length > 0;
     }
 
-    let url = "https://clarks-backend.herokuapp.com/login"
+    let url = "http://localhost:3000/login"
 
     function handleSubmit(event) {
         event.preventDefault();

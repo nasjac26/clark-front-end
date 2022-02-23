@@ -25,25 +25,24 @@ function App() {
 
    //fetching hair extensions from api inventory
   useEffect(() => {
-    fetch("https://clarks-backend.herokuapp.com/hair_extensions")
+    fetch("http://localhost:3001/hair_extensions")
     .then(response => response.json())
     .then(data => checkIfHairProductsExists(data))
 }, []);
 
    //fetching tools from api inventory
   useEffect(() => {
-    fetch("https://clarks-backend.herokuapp.com/tools")
+    fetch("http://localhost:3001/tools")
     .then(response => response.json())
     .then(data => checkIfToolsExists(data))
   }, []);
 
 
   useEffect(() => {
-      fetch("https://clarks-backend.herokuapp.com/events")
+      fetch("http://localhost:3001/events")
       .then(response => response.json())
       .then(data => checkIfClassesExists(data))
   }, [])
-
 
 
 function checkIfToolsExists(data) {
@@ -62,7 +61,7 @@ function checkIfClassesExists(data) {
       setClassList(data)
   }
 }
-
+console.log(toolList)
   return (
     <BrowserRouter>
     <Navbar  user={user} setUser={setUser}/>
