@@ -48,7 +48,7 @@ const url = "https://clarks-backend.herokuapp.com/logout"
                     {!user.admin === true ? null : showAdminTools()}
                     {!user ? showLoginButton() : showLogoutButton()}
                     <NavLink className="nav-link text-secondary" to="/classes">Education</NavLink>
-                    <a href="#" class="snipcart-checkout">Click here to checkout</a>
+                    <a href="#" class="snipcart-checkout"><i class="bi bi-basket"></i></a>
 
                 </div>
             </div>
