@@ -3,8 +3,7 @@ import { useState, useEffect } from "react"
 import { useParams } from "react-router-dom"
 import Button from "react-bootstrap/Button"
 import Card from "react-bootstrap/Card"
-import Row from 'react-bootstrap/esm/Row';
-import Col from 'react-bootstrap/esm/Col';
+
 
 function Product(props) {
     const [currentProduct, setCurrentProduct] = useState([])
@@ -16,7 +15,7 @@ function Product(props) {
         }, [id]);
 
         const getProduct = () => {
-        fetch(`https://clarks-backend.herokuapp.com/tools/${id}`)
+        fetch(`http://localhost:3001/tools/${id}`)
             .then(r => r.json())
             .then((data) => setCurrentProduct(data))
         };
@@ -40,11 +39,11 @@ function Product(props) {
                             <Button
                                 variant="dark"
                                 className="snipcart-add-item d-flex justify-content-center"
-                                data-item-id={props.id}
-                                data-item-name={props.name}
-                                data-item-price="13"
-                                data-item-weight="20"
-                                data-item-description="Some fresh bacon">
+                                data-item-id={currentProduct.id}
+                                data-item-name={currentProduct.name}
+                                data-item-price={currentProduct.price}
+                                data-item-description={currentProduct.description}
+                                data-item-url={`/tools/${props.id}`}>
                                     Add to Cart
                             </Button>
                         </div>    
@@ -73,7 +72,9 @@ function Product(props) {
                                 data-item-id={currentProduct.id}
                                 data-item-name={currentProduct.name}
                                 data-item-price={currentProduct.price}
-                                data-item-description={currentProduct.description}>
+                                data-item-description={currentProduct.description}
+                                data-item-url={`/tools/${props.id}`}>
+
                                     Add to Cart
                             </Button>
                         </div>

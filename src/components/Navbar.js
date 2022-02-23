@@ -2,7 +2,7 @@ import { NavLink, useNavigate } from "react-router-dom";
 
 function Navbar( { user, setUser } ) {
 const navigate = useNavigate();
-const url = "https://clarks-backend.herokuapp.com/logout"
+const url = "http://localhost:3001/logout"
 
     function handleLogoutClick() {
         fetch(url, { method: "DELETE" }).then((r) => {
@@ -48,7 +48,7 @@ const url = "https://clarks-backend.herokuapp.com/logout"
                     {!user.admin === true ? null : showAdminTools()}
                     {!user ? showLoginButton() : showLogoutButton()}
                     <NavLink className="nav-link text-secondary" to="/classes">Education</NavLink>
-                    <a href="#" class="snipcart-checkout"><i class="bi bi-basket"></i></a>
+                    <a class="bi bi-basket"></a>
 
                 </div>
             </div>
