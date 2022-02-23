@@ -1,10 +1,8 @@
 import React from "react";
-import { useState } from "react";
 import Card from 'react-bootstrap/Card'
 import Button from 'react-bootstrap/Button'
 import Container from 'react-bootstrap/Container'
 import { Link, Outlet } from "react-router-dom";
-import Product from "./Product";
 
 
 
@@ -26,6 +24,7 @@ function ToolCard(props) {
                             data-item-id={props.id}
                             data-item-name={props.name}
                             data-item-price={props.price}
+                            data-item-url={`/${props.id}`}
                             data-item-description={props.description}>
                                 Add to Cart
                         </Button>
