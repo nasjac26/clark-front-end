@@ -1,0 +1,14 @@
+function ClassInformation() {
+    return(
+        <div>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pharetra vel turpis nunc eget lorem. Sapien nec sagittis aliquam malesuada bibendum arcu. Nisl nunc mi ipsum faucibus. Rutrum quisque non tellus orci. Tortor pretium viverra suspendisse potenti. Ut aliquam purus sit amet luctus venenatis lectus magna fringilla. Turpis massa sed elementum tempus egestas sed sed risus. Quam adipiscing vitae proin sagittis nisl rhoncus mattis rhoncus urna. Ut tristique et egestas quis ipsum. Consectetur adipiscing elit duis tristique sollicitudin nibh. Odio ut sem nulla pharetra diam. Tempus imperdiet nulla malesuada pellentesque elit eget gravida cum. Lorem mollis aliquam ut porttitor leo a diam sollicitudin. Imperdiet dui accumsan sit amet nulla.
+
+        Elit scelerisque mauris pellentesque pulvinar pellentesque habitant morbi tristique. Cursus euismod quis viverra nibh cras pulvinar mattis nunc. Nunc eget lorem dolor sed viverra ipsum nunc aliquet. Egestas dui id ornare arcu. Adipiscing at in tellus integer. Dictum non consectetur a erat nam. Accumsan in nisl nisi scelerisque. Augue neque gravida in fermentum et sollicitudin ac orci phasellus. Convallis a cras semper auctor neque vitae tempus quam. Ultrices neque ornare aenean euismod elementum nisi quis eleifend quam. Arcu dictum varius duis at consectetur. Tincidunt augue interdum velit euismod in pellentesque. Eu nisl nunc mi ipsum faucibus vitae aliquet nec. Faucibus purus in massa tempor nec feugiat. Accumsan lacus vel facilisis volutpat est velit egestas dui id. Blandit volutpat maecenas volutpat blandit aliquam etiam erat. Sed lectus vestibulum mattis ullamcorper velit sed ullamcorper. Felis donec et odio pellentesque. Lorem ipsum dolor sit amet consectetur adipiscing elit. Et pharetra pharetra massa massa ultricies mi.
+
+        Elit pellentesque habitant morbi tristique. Semper feugiat nibh sed pulvinar proin. Egestas pretium aenean pharetra magna ac placerat vestibulum lectus mauris. Nunc sed id semper risus in hendrerit gravida. Lacus viverra vitae congue eu consequat. Justo donec enim diam vulputate. A erat nam at lectus urna. Nibh tortor id aliquet lectus proin nibh nisl condimentum id. Sit amet justo donec enim diam. Est placerat in egestas erat imperdiet sed euismod nisi porta. Porta non pulvinar neque laoreet suspendisse interdum consectetur. Laoreet id donec ultrices tincidunt arcu non sodales neque sodales. Tincidunt vitae semper quis lectus nulla at volutpat diam ut. Lacus suspendisse faucibus interdum posuere lorem ipsum dolor sit amet.
+        </div>
+    )
+    
+}
+
+export default ClassInformation;

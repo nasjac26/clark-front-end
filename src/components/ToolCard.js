@@ -26,17 +26,15 @@ function ToolCard(props) {
                             data-item-id={props.id}
                             data-item-name={props.name}
                             data-item-price={props.price}
+                            data-item-url="/"
                             data-item-description={props.description}>
                                 Add to Cart
                         </Button>
-                        
-
                     </Container>
                     <Container className="d-flex justify-content-center">
                         <Link className="nav-link text-secondary" to={`/tools/${props.id}`}> View More
                         </Link>
                     </Container>
-                    
                 </Card.Body>
             </Card>
             <Outlet />

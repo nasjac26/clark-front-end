@@ -2,7 +2,6 @@ import Carousel from "./Carousel";
 import { NavLink } from "react-router-dom";
 
 function Home(props) {
-    console.log(props)
     return (
         <div className="">
             <div className="m-5 text-justify">
@@ -12,7 +11,6 @@ function Home(props) {
             </div>
             <div className="">
                 <Carousel />
-
             </div>
         </div>
     )
