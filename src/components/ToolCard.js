@@ -24,7 +24,7 @@ function ToolCard(props) {
                             data-item-id={props.id}
                             data-item-name={props.name}
                             data-item-price={props.price}
-                            data-item-url={`/${props.id}`}
+                            data-item-url={`/tools/${props.id}`}
                             data-item-description={props.description}>
                                 Add to Cart
                         </Button>
