@@ -43,7 +43,7 @@ function Product(props) {
                                 data-item-name={currentProduct.name}
                                 data-item-price={currentProduct.price}
                                 data-item-description={currentProduct.description}
-                                data-item-url={`../snipcart.json`}>
+                                data-item-url={`/tools/`}>
                                     Add to Cart
                             </Button>
                         </div>    
@@ -73,7 +73,7 @@ function Product(props) {
                                 data-item-name={currentProduct.name}
                                 data-item-price={currentProduct.price}
                                 data-item-description={currentProduct.description}
-                                data-item-url={`../snipcart.json`}>
+                                data-item-url={`/tools/`}>
 
                                     Add to Cart
                             </Button>
