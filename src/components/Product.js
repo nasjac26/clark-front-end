@@ -8,7 +8,6 @@ import Card from "react-bootstrap/Card"
 function Product(props) {
     const [currentProduct, setCurrentProduct] = useState([])
     const { id } = useParams()
-    console.log(currentProduct)
     
     useEffect(() => {
         getProduct()
@@ -35,7 +34,7 @@ function Product(props) {
                         <Card.Text>
                             ${currentProduct.price}
                         </Card.Text>
-                        <div className=' d-grid gap-2'>
+                        <div className='d-grid gap-2'>
                             <Button
                                 variant="dark"
                                 className="snipcart-add-item d-flex justify-content-center"
@@ -43,7 +42,7 @@ function Product(props) {
                                 data-item-name={currentProduct.name}
                                 data-item-price={currentProduct.price}
                                 data-item-description={currentProduct.description}
-                                data-item-url={`/tools/`}>
+                                data-item-url={`https://clarks-backend.herokuapp.com/tools/${currentProduct.id}`}>
                                     Add to Cart
                             </Button>
                         </div>    
