@@ -41,7 +41,7 @@ function App() {
   useEffect(() => {
       fetch("https://clarks-backend.herokuapp.com/events")
       .then(response => response.json())
-      .then(data => checkIfClassesExists(data))
+      .then(data => setClassList(data))
   }, [])
 
 
@@ -56,11 +56,15 @@ function checkIfHairProductsExists(data) {
       sethairextensionList(data)
   }
 }
+/*Not using right now cause bugged when checking for some reason
 function checkIfClassesExists(data) {
   if (!!data) {
       setClassList(data)
   }
 }
+*/
+
+
   return (
     <BrowserRouter>
     <Navbar  user={user} setUser={setUser}/>
