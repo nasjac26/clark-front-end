@@ -13,8 +13,7 @@ function AdminClassManager() {
             <div className='container p-5'>
                 <h1 className='d-flex justify-content-center'>Manage a Class</h1>
             </div>
-        </div>
-       
+        </div>      
     )
 }
 

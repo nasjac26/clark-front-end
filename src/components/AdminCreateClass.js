@@ -8,7 +8,7 @@ function AdminCreateClass() {
     const [ location, setLocation ] = useState("")
     const [stock, setStock ] = useState("")
 
-    let url = "https://clarks-backend.herokuapp.com/events"
+    let url = `https://clarks-backend.herokuapp.com/events`
 
     function handleSubmit(event) {
         event.preventDefault();
