@@ -42,7 +42,7 @@ function Product(props) {
                                 data-item-name={currentProduct.name}
                                 data-item-price={currentProduct.price}
                                 data-item-description={currentProduct.description}
-                                data-item-url={`https://clarks-backend.herokuapp.com/tools/${currentProduct.id}`}>
+                                data-item-url={`/`}>
                                     Add to Cart
                             </Button>
                         </div>    
@@ -72,7 +72,7 @@ function Product(props) {
                                 data-item-name={currentProduct.name}
                                 data-item-price={currentProduct.price}
                                 data-item-description={currentProduct.description}
-                                data-item-url={`/tools/`}>
+                                data-item-url={`/`}>
 
                                     Add to Cart
                             </Button>
