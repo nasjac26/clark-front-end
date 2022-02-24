@@ -41,7 +41,7 @@ function App() {
   useEffect(() => {
       fetch("https://clarks-backend.herokuapp.com/events")
       .then(response => response.json())
-      .then(data => checkIfClassesExists(data))
+      .then(data => setClassList(data))
   }, [])
 
 
@@ -61,7 +61,6 @@ function checkIfClassesExists(data) {
       setClassList(data)
   }
 }
-console.log(toolList)
   return (
     <BrowserRouter>
     <Navbar  user={user} setUser={setUser}/>
