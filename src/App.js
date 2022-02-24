@@ -25,21 +25,21 @@ function App() {
 
    //fetching hair extensions from api inventory
   useEffect(() => {
-    fetch("https://https://clarks-backend.herokuapp.com/hair_extensions")
+    fetch("https://clarks-backend.herokuapp.com/hair_extensions")
     .then(response => response.json())
     .then(data => checkIfHairProductsExists(data))
 }, []);
 
    //fetching tools from api inventory
   useEffect(() => {
-    fetch("https://https://clarks-backend.herokuapp.com/tools")
+    fetch("https://clarks-backend.herokuapp.com/tools")
     .then(response => response.json())
     .then(data => checkIfToolsExists(data))
   }, []);
 
 
   useEffect(() => {
-      fetch("https://https://clarks-backend.herokuapp.com/events")
+      fetch("https://clarks-backend.herokuapp.com/events")
       .then(response => response.json())
       .then(data => checkIfClassesExists(data))
   }, [])
