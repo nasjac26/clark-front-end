@@ -5,8 +5,8 @@ import Container from 'react-bootstrap/Container'
 
 
 const ClassCard = (props) => {
-
     const classFactory = () => {
+
         return props.classList.map(e => {
             return (
             <div className="container">  

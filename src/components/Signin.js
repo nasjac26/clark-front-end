@@ -14,7 +14,7 @@ function Signin({ user, setUser, setIsSignedIn, isSignedIn }) {
         return email.length > 0 && password.length > 0;
     }
 
-    let url = "https://clarks-backend.herokuapp.com/login"
+    let url = `https://https://clarks-backend.herokuapp.com/`
 
     function handleSubmit(event) {
         event.preventDefault();
@@ -28,7 +28,7 @@ function Signin({ user, setUser, setIsSignedIn, isSignedIn }) {
             if (response.ok) {
                 response.json().then((user) => setUser(user))
                 .then(setIsSignedIn(true));
-            } else(console.log("something went wrong", email, password))
+            } else(alert("Incorrect Email or Password!"))
             
         });
         navigate('/');
