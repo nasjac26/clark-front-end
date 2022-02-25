@@ -7,7 +7,7 @@ function ClassContainer(props) {
     return(
         <div>
             <div className="container"><ClassInformation /></div>
-            <div className="container mb-5"><ClassCard classList={props.classList} /></div>
+            {/* <div className="container mb-5"><ClassCard classList={props.classList} /></div> */}
 
         </div>
     )
