@@ -7,7 +7,7 @@ function ClassContainer(props) {
     return(
         <div>
             <div className="container"><ClassInformation /></div>
-            {props.classList && <div className="container mb-5"><ClassCard classList={props.classList} /></div> }
+            {!!props && <div className="container mb-5"><ClassCard classList={props.classList} /></div>}
 
         </div>
     )
