@@ -5,12 +5,6 @@ import AdminClassManager from './AdminClassManager';
 
 
 
-
-
-
-
-
-
 function AdminTools(props) {
     
   const adminStatusString = props.user.admin.toString()
@@ -22,7 +16,8 @@ function AdminTools(props) {
             <h1 className='d-flex justify-content-center'>Stock Manager</h1>
             <AdminStock productList={props.toolList} />
             <AdminApproval />
-            <AdminClassManager />
+            <AdminClassManager classList={props.classList} />
+
           </div>
             
         </div>

@@ -23,7 +23,7 @@ function App() {
   const [classList, setClassList] = useState("")
 
 
-  const url = `https://clarks-backend.herokuapp.com/`
+  const url = `http://localhost:3001/`
 
    //fetching hair extensions from api inventory
   useEffect(() => {
@@ -78,7 +78,7 @@ function checkIfClassesExists(data) {
         {/* Disabled until ready to sell */}
         {/* <Route path="/products" element={<ProductContainer hairExtensionList={hairExtensionList} sethairextensionList={sethairextensionList} />}/> */}
         <Route path="/tools" element={<ToolsContainer toolList={toolList} setToolList={setToolList} />}/>
-        <Route path="/admin-tools" element={<AdminTools user={user} toolList={toolList} setToolList={setToolList} />}/>
+        <Route path="/admin-tools" element={<AdminTools user={user} toolList={toolList} setToolList={setToolList} classList={classList} />}/>
         <Route path="/tools/:id" element={<Product toolList={toolList} />} />
         <Route path="/classes" element={<ClassContainer classList={classList} />} />
 

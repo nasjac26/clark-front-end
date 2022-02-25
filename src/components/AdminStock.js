@@ -1,8 +1,5 @@
 import React from 'react';
-import { useState, useEffect } from "react";
-import ProductCard from './HairExtensionCard';
 import Row from 'react-bootstrap/Row'
-
 import AdminProductCard from './AdminProductCard';
 import Col from 'react-bootstrap/Col'
 

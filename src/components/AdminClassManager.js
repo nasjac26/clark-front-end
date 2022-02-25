@@ -1,7 +1,8 @@
 import React from "react";
 import AdminCreateClass from "./AdminCreateClass";
+import AdminClassList from "./AdminClassList"
 
-function AdminClassManager() {
+function AdminClassManager(props) {
     return(
         <div>
             <div className='container p-5'>
@@ -12,6 +13,9 @@ function AdminClassManager() {
             </div>
             <div className='container p-5'>
                 <h1 className='d-flex justify-content-center'>Manage a Class</h1>
+                <div>
+                    {props && <AdminClassList classList={props.classList}  />}
+                </div>
             </div>
         </div>      
     )

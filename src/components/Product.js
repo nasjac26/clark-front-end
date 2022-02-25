@@ -14,7 +14,7 @@ function Product(props) {
         }, [id]);
 
         const getProduct = () => {
-        fetch(`https://clarks-backend.herokuapp.com/tools/${id}`)
+        fetch(`http://localhost:3001/tools/${id}`)
             .then(r => r.json())
             .then((data) => setCurrentProduct(data))
         };
@@ -42,7 +42,7 @@ function Product(props) {
                                 data-item-name={currentProduct.name}
                                 data-item-price={currentProduct.price}
                                 data-item-description={currentProduct.description}
-                                data-item-url={`https://clarks-backend.herokuapp.com/tools/`}>
+                                data-item-url={`http://localhost:3001/tools/`}>
                                     Add to Cart
                             </Button>
                         </div>    
@@ -72,7 +72,7 @@ function Product(props) {
                                 data-item-name={currentProduct.name}
                                 data-item-price={currentProduct.price}
                                 data-item-description={currentProduct.description}
-                                data-item-url={`https://clarks-backend.herokuapp.com/tools/`}>
+                                data-item-url={`http://localhost:3001/tools/`}>
 
                                     Add to Cart
                             </Button>
