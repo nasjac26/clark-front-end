@@ -23,23 +23,25 @@ function App() {
   const [classList, setClassList] = useState("")
 
 
+  const url = `https://clarks-backend.herokuapp.com/`
+
    //fetching hair extensions from api inventory
   useEffect(() => {
-    fetch("https://clarks-backend.herokuapp.com/hair_extensions")
+    fetch(url + "hair_extensions")
     .then(response => response.json())
     .then(data => checkIfHairProductsExists(data))
 }, []);
 
    //fetching tools from api inventory
   useEffect(() => {
-    fetch("https://clarks-backend.herokuapp.com/tools")
+    fetch(url + "tools")
     .then(response => response.json())
     .then(data => checkIfToolsExists(data))
   }, []);
 
 
   useEffect(() => {
-      fetch("https://clarks-backend.herokuapp.com/events")
+      fetch(url + "events")
       .then(response => response.json())
       .then(data => setClassList(data))
   }, [])
