@@ -8,6 +8,14 @@ const AdminUserCard = (props) => {
     let licensedBoolean = props.licensed
 
     licensedBoolean = licensedBoolean.toString()
+    // const updatedUser = {
+    //     id: props.id,
+    //     name: props.name,
+    //     password_digest: props.password_digest,
+    //     email: props.email,
+    //     licenced: !props.licensed,
+    //     admin: props.admin
+    // }
 
     const handleSubmit = () => {
         fetch(`http://localhost:3001/users/${props.id}`, {
@@ -15,10 +23,7 @@ const AdminUserCard = (props) => {
             headers: {
                 'Content-type': 'application/json'
             },
-            body: JSON.stringify({
-                licenced: !licensedBoolean,
-                password: props.password_digest
-            }),   
+            body: JSON.stringify({licenced: !props.licensed})  
         })
     .then((response) => response.json())
     .then((json) => console.log(json));

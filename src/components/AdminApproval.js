@@ -28,6 +28,7 @@ function AdminApproval(props) {
               email={customer.email}
               licensed={customer.licenced}
               password={customer.password_digest}
+              admin={customer.admin}
           />
         )
     }
