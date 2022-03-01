@@ -8,13 +8,13 @@ function AdminClassManager(props) {
             <div className='container p-5'>
                 <h1 className='d-flex justify-content-center'>Create a Class</h1>
                 <div>
-                    <AdminCreateClass />
+                    <AdminCreateClass classList={props.classList} setClassList={props.setClassList}  />
                 </div>
             </div>
             <div className='container p-5'>
                 <h1 className='d-flex justify-content-center'>Manage a Class</h1>
                 <div>
-                    {props && <AdminClassList classList={props.classList}  />}
+                    {props && <AdminClassList classList={props.classList} setClassList={props.setClassList} />}
                 </div>
             </div>
         </div>      

@@ -16,7 +16,7 @@ function AdminTools(props) {
             <h1 className='d-flex justify-content-center'>Stock Manager</h1>
             <AdminStock productList={props.toolList} />
             <AdminApproval />
-            <AdminClassManager classList={props.classList} />
+            <AdminClassManager classList={props.classList} setClassList={props.setClassList} />
 
           </div>
             

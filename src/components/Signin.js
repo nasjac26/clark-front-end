@@ -45,9 +45,12 @@ function Signin({ user, setUser, setIsSignedIn, isSignedIn }) {
             </div>
             <div className="container text-white m-5 mx-auto">
                 <p className="text-center"></p>
-
             </div>
-            
+
+            <div>
+                Signup and email <b>phaneshairextensions@gmail.com</b> with a picture of your certificate with the email you registered with to be approved industry discounts.
+            </div>
+
             {/* form container */}
             <div className="Login container p-3 rounded" style={{ backgroundColor: "#eed393" }}>
                 <Form style={{ backgroundColor: "#eed393" }} onSubmit={handleSubmit}>

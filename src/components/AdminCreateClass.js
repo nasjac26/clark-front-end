@@ -1,7 +1,9 @@
 import React, { useState } from "react";
+import { useNavigate } from 'react-router-dom';
 
-function AdminCreateClass() {
 
+function AdminCreateClass(props) {
+    const navigate = useNavigate();
     const [ name, setName ] = useState("")
     const [ price, setPrice ] = useState("")
     const [ date, setDate ] = useState("")
@@ -18,13 +20,16 @@ function AdminCreateClass() {
             headers: {
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify({ name: name, date: date, price: price, location: location, description: "hello love", stock: stock }),
+            body: JSON.stringify({ name: name, date: date, price: price, location: location, description: "", stock: stock }),
         })
         .then(response => response.json())
-        .then(data => console.log('Success:', data))
+        .then(alert("CLASS ADDED SUCCESSFULLY. Please Verify Class Lists for Addition and relogin to admin account to add another."))
         .catch((error) => {
             console.error('Error:', error);
         });
+        navigate('/');
+        window.location.reload();
+
     }
 
 

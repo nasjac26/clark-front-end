@@ -11,12 +11,9 @@ const AdminClassCard = (props) => {
     function handleDeleteClick() {
         fetch(`http://localhost:3001/events/${props.id}`, {
             method: "DELETE",
-        }).then((r) => {
-            if (r.ok) {
-            console.log("deleted!");
-            }
-        })
-        }
+        }).then(props.setClassList(props.classList.filter(e => e.id != props.id)))
+    }
+    
 
     return (
         <div>

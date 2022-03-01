@@ -1,23 +1,22 @@
 import React from 'react'
-import blacklogo from '../assets/black-logo.png'
-import whitelogo from '../assets/white-logo.png'
 
 
-function Carousel(props) {
+
+function Carousel() {
 
     return (
         <div className="container">
-            <div className="container shadow-lg p-3 mb-5 bg-body rounded w-auto">
-                <div id="carouselExampleControls" class="carousel slide h" data-bs-ride="carousel">
-                    <div class="carousel-inner">
+            <div className="shadow-lg rounded h-100">
+                <div class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner p-5 ">
                         <div class="carousel-item active">
-                            <img src="https://i.ibb.co/GkQbTSY/beads.jpg" class="d-block w-75" alt="..."></img>
+                            <img src="https://i.ibb.co/GkQbTSY/beads.jpg" className="d-block w-100" alt="..."></img>
                         </div>
                         <div class="carousel-item">
-                            <img src="https://i.ibb.co/dMWYn26/tool-kit-logo.jpg" class="d-block w-75" alt="..."></img>
+                            <img src="https://i.ibb.co/GkQbTSY/beads.jpg" className="d-block w-100" alt="..."></img>
                         </div>
                         <div class="carousel-item">
-                            <img src="https://i.ibb.co/GkQbTSY/beads.jpg" class="d-block" alt="..."></img>
+                            <img src="https://i.ibb.co/GkQbTSY/beads.jpg" className="d-block w-100" alt="..."></img>
                         </div>
                     </div>
                     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">

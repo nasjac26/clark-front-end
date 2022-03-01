@@ -7,6 +7,7 @@ import Button from "react-bootstrap/Button";
 
 function Signup({ setUser, setIsSignedIn }) {
     const navigate = useNavigate();
+    const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [passwordConfirmation, setPasswordConfirmation] = useState("");
@@ -24,7 +25,7 @@ function Signup({ setUser, setIsSignedIn }) {
             headers: {
                 "Content-Type": "application/json",
             },
-            body: JSON.stringify({ email: email, password: password }),
+            body: JSON.stringify({ name: name, email: email, password: password }),
         })
             .then((response) => {
                 if (response.ok) {
@@ -43,7 +44,6 @@ function Signup({ setUser, setIsSignedIn }) {
                 <img style={{ maxWidth: 200 }} className="rounded m-5 mx-auto d-block" src={whitelogo} alt="The Clark Salon Logo"></img>
             </div>
 
-            
             {/* form container */}
             <div style={{ backgroundColor: "#eed393" }} className="container rounded">
                 <Form className="m-2" onSubmit={handleSubmit}>
@@ -54,6 +54,15 @@ function Signup({ setUser, setIsSignedIn }) {
                             type="email"
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
+                        />
+                    </Form.Group>
+                    <Form.Group size="lg"  controlId="name">
+                        <Form.Label className="pt-2">First and Last Name</Form.Label>
+                        <Form.Control
+                            autoFocus
+                            type="name"
+                            value={name}
+                            onChange={(e) => setName(e.target.value)}
                         />
                     </Form.Group>
                     <Form.Group size="lg" controlId="password">

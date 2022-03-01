@@ -14,7 +14,6 @@ import ClassContainer from "./components/ClassContainer";
 
 
 function App() {
-  const [reload, setReload] = useState(false)
   const [user, setUser ] = useState("");
   const [hairExtensionList, sethairextensionList] = useState([])
   const [isSignedIn, setIsSignedIn] = useState(false)
@@ -24,6 +23,8 @@ function App() {
 
 
   const url = `http://localhost:3001/`
+
+  
 
    //fetching hair extensions from api inventory
   useEffect(() => {
@@ -58,29 +59,21 @@ function checkIfHairProductsExists(data) {
       sethairextensionList(data)
   }
 }
-/*Not using right now cause bugged when checking for some reason
-function checkIfClassesExists(data) {
-  if (!!data) {
-      setClassList(data)
-  }
-}
-*/
-
 
   return (
     <BrowserRouter>
     <Navbar  user={user} setUser={setUser}/>
     <div>
       <Routes>
-        <Route path="/" element={<Home user={user} />}/>
+        <Route path="/" element={<Home user={user} toolList={toolList} />}/>
         <Route path="/signup" element={<Signup setUser={setUser} user={user} isSignedIn={isSignedIn} setIsSignedIn={setIsSignedIn} />}/>
         <Route path="/signin" element={<Signin setUser={setUser} user={user} isSignedIn={isSignedIn} setIsSignedIn={setIsSignedIn} />}/>
         {/* Disabled until ready to sell */}
         {/* <Route path="/products" element={<ProductContainer hairExtensionList={hairExtensionList} sethairextensionList={sethairextensionList} />}/> */}
         <Route path="/tools" element={<ToolsContainer toolList={toolList} setToolList={setToolList} />}/>
-        <Route path="/admin-tools" element={<AdminTools user={user} toolList={toolList} setToolList={setToolList} classList={classList} />}/>
+        <Route path="/admin-tools" element={<AdminTools user={user} toolList={toolList} setToolList={setToolList} classList={classList} setClassList={setClassList} />}/>
         <Route path="/tools/:id" element={<Product toolList={toolList} />} />
-        <Route path="/classes" element={<ClassContainer classList={classList} />} />
+        <Route path="/classes" element={<ClassContainer classList={classList}  />} />
 
       </Routes>
     </div>
