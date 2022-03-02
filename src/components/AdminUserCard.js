@@ -27,14 +27,16 @@ const AdminUserCard = (props) => {
         })
     .then((response) => response.json())
     .then((json) => console.log(json));
+    alert("Successfully updated! Please refresh and relogin to reflect changes")
+    licensedBoolean = !licensedBoolean
     }
 
     return (
-    <div className="container w-25 p-2"> 
-        <Col className="container">
-            <Card className="shadow bg-body rounded">
+    <div className=""> 
+        <Col className="">
+            <Card className="">
                 <Card.Body className="">
-                    <Card.Title className="d-flex justify-content-center">{props.name}</Card.Title>
+                    <Card.Title className="d-flex justify-content-center ">{props.name}</Card.Title>
                     <Card.Text className="d-flex justify-content-center">
                         {props.email}
                     </Card.Text>
@@ -42,12 +44,12 @@ const AdminUserCard = (props) => {
                         {props.date}
                     </Card.Text>
                     <Card.Text className="d-flex justify-content-center">
-                        {licensedBoolean}
+                        Licensed? {licensedBoolean}
                     </Card.Text>
                     <Container className="d-flex justify-content-center">
                     </Container>
                 </Card.Body>
-                <button onClick={(handleSubmit)}>Update user to licensed?</button>
+                <button onClick={(handleSubmit)}>Change Licensed</button>
             </Card>
         </Col>
     </div> 

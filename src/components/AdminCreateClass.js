@@ -9,6 +9,7 @@ function AdminCreateClass(props) {
     const [ date, setDate ] = useState("")
     const [ location, setLocation ] = useState("")
     const [stock, setStock ] = useState("")
+    const [time, setTime ] = useState("")
 
     let url = `http://localhost:3001/events`
 
@@ -20,7 +21,7 @@ function AdminCreateClass(props) {
             headers: {
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify({ name: name, date: date, price: price, location: location, description: "", stock: stock }),
+            body: JSON.stringify({ name: name, date: date, price: price, location: location, description: "", time: time }),
         })
         .then(response => response.json())
         .then(alert("CLASS ADDED SUCCESSFULLY. Please Verify Class Lists for Addition and relogin to admin account to add another."))
@@ -68,13 +69,13 @@ function AdminCreateClass(props) {
                         value={location}
                         onChange={(event) => setLocation(event.target.value)}
                     />
-                <label>Seats Available</label>
+                <label>Time (ie 9:00 AM PST)</label>
                     <input 
-                        type="number"
+                        type="text"
                         class="form-control"
-                        id="createdEventSeatCount"
-                        value={stock}
-                        onChange={(event) => setStock(event.target.value)}
+                        id="createdTimeSeatCount"
+                        value={time}
+                        onChange={(event) => setTime(event.target.value)}
                     />
             <button type="submit" className="btn btn-dark">Create Class</button>
             </form>

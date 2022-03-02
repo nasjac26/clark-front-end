@@ -50,6 +50,7 @@ const url = `http://localhost:3001/`
 
                     {!user ? showLoginButton() : showLogoutButton()}
                     <a class="bi bi-basket"></a>
+                    <a href="#" class="snipcart-checkout nav-link text-secondary">Cart</a>
 
                 </div>
             </div>

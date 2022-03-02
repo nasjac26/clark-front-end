@@ -18,6 +18,7 @@ function Product(props) {
             .then(r => r.json())
             .then((data) => setCurrentProduct(data))
         };
+
     const mobileProductDescriptionRender = () => {
         return(
             <div>

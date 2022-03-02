@@ -11,13 +11,14 @@ const AdminClassCard = (props) => {
     function handleDeleteClick() {
         fetch(`http://localhost:3001/events/${props.id}`, {
             method: "DELETE",
-        }).then(props.setClassList(props.classList.filter(e => e.id != props.id)))
+        }).then(props.setClassList(props.classList.filter(e => e.id != props.id)));
+        alert("Removed! Will reflect after page refresh and relogin.")
     }
     
 
     return (
         <div>
-            <div className="container w-25 p-2"> 
+            <div className="container"> 
                 <Col className="container">
                     <Card className="shadow bg-body rounded">
                         <Card.Body className="">

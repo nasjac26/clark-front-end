@@ -10,7 +10,7 @@ const ClassCard = (props) => {
 
         return props.classList.map(e => {
             return (
-            <div className="container w-25 p-2"> 
+            <div className="container p-2"> 
                 <Col className="container">
                     <Card className="shadow bg-body rounded">
                         <Card.Body className="">
@@ -22,7 +22,16 @@ const ClassCard = (props) => {
                                 {e.date}
                             </Card.Text>
                             <Card.Text className="d-flex justify-content-center">
+                                Location of Class: 
+                            </Card.Text>
+                            <Card.Text className="d-flex justify-content-around">
                                 {e.location}
+                            </Card.Text>
+                            <Card.Text className="d-flex justify-content-center">
+                                Time of class: 
+                            </Card.Text>
+                            <Card.Text className="d-flex justify-content-around">
+                                {e.time}
                             </Card.Text>
                             <Container className="d-flex justify-content-center">
                                 <Button
@@ -31,7 +40,7 @@ const ClassCard = (props) => {
                                     data-item-id={e.id}
                                     data-item-name={e.name}
                                     data-item-price={e.price}
-                                    data-item-description={e.description}
+                                    data-item-description={`Instructional class on ${e.date} at ${e.time} in ${e.location}`}
                                     data-item-url={`http://localhost:3001/events/`}>
                                         Add to Cart
                                 </Button>
