@@ -22,7 +22,7 @@ function App() {
   const [classList, setClassList] = useState("")
 
 
-  const url = `http://localhost:3001/`
+  const url = `https://clarks-backend.herokuapp.com/`
 
   
 
