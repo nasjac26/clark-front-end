@@ -2,7 +2,7 @@ import { NavLink, useNavigate } from "react-router-dom";
 
 function Navbar( { user, setUser } ) {
 const navigate = useNavigate();
-const url = `http://localhost:3001/`
+const url = `https://clarks-backend.herokuapp.com/`
 
     function handleLogoutClick() {
         fetch(url, { method: "DELETE" }).then((r) => {
