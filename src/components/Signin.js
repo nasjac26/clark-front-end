@@ -26,7 +26,7 @@ function Signin({ user, setUser, setIsSignedIn, isSignedIn, setToolList }) {
             body: JSON.stringify({ email: email, password: password }),
         }).then((response) => {
             if (response.ok) {
-                response.json().then((user) => localStorage.setItem("user", JSON.stringify(user)))
+                response.json().then((user) => setUser(user))
             } else(alert("Incorrect Email or Password!"));
         });
         navigate('/');
