@@ -41,7 +41,7 @@ const ClassCard = (props) => {
                                     data-item-name={e.name}
                                     data-item-price={e.price}
                                     data-item-description={`Instructional class on ${e.date} at ${e.time} in ${e.location}`}
-                                    data-item-url={`https://clarks-backend.herokuapp.com/events/`}>
+                                    data-item-url={`http://localhost:3001/events/`}>
                                         Add to Cart
                                 </Button>
                             </Container>

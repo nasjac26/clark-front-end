@@ -1,11 +1,11 @@
-import React from 'react'
+import React, { useDebugValue } from 'react'
 import whitelogo from '../assets/white-logo.png'
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 
-function Signin({ user, setUser, setIsSignedIn, isSignedIn }) {
+function Signin({ user, setUser, setIsSignedIn, isSignedIn, setToolList }) {
     const navigate = useNavigate();
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
@@ -14,11 +14,11 @@ function Signin({ user, setUser, setIsSignedIn, isSignedIn }) {
         return email.length > 0 && password.length > 0;
     }
 
-    let url = `https://clarks-backend.herokuapp.com/login`
+    let url = `http://localhost:3001/`
 
     function handleSubmit(event) {
         event.preventDefault();
-        fetch(url, {
+        fetch(url + "login", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -26,10 +26,8 @@ function Signin({ user, setUser, setIsSignedIn, isSignedIn }) {
             body: JSON.stringify({ email: email, password: password }),
         }).then((response) => {
             if (response.ok) {
-                response.json().then((user) => setUser(user))
-                .then(setIsSignedIn(true));
-            } else(alert("Incorrect Email or Password!"))
-            
+                response.json().then((user) => localStorage.setItem("user", JSON.stringify(user)))
+            } else(alert("Incorrect Email or Password!"));
         });
         navigate('/');
     }

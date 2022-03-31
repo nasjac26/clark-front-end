@@ -18,7 +18,7 @@ const AdminUserCard = (props) => {
     // }
 
     const handleSubmit = () => {
-        fetch(`https://clarks-backend.herokuapp.com/users/${props.id}`, {
+        fetch(`http://localhost:3001/users/${props.id}`, {
             method: 'PATCH',
             headers: {
                 'Content-type': 'application/json'

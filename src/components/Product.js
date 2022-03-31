@@ -14,7 +14,7 @@ function Product(props) {
         }, [id]);
 
         const getProduct = () => {
-        fetch(`https://clarks-backend.herokuapp.com/tools/${id}`)
+        fetch(`http://localhost:3001/tools/${id}`)
             .then(r => r.json())
             .then((data) => setCurrentProduct(data))
         };
