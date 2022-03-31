@@ -24,7 +24,7 @@ function ToolCard(props) {
                             data-item-id={props.id}
                             data-item-name={props.name}
                             data-item-price={props.price}
-                            data-item-url={`https://clarks-backend.herokuapp.com/tools/`}
+                            data-item-url={`http://localhost:3001/tools/`}
                             data-item-description={props.description}>
                                 Add to Cart
                         </Button>
