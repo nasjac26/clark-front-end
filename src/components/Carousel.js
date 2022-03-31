@@ -13,7 +13,7 @@ function Carousel() {
                             <img src="https://i.ibb.co/GkQbTSY/beads.jpg" className="d-block w-100" alt="..."></img>
                         </div>
                         <div class="carousel-item">
-                            <img src="https://ibb.co/L6ZHPrM" className="d-block w-100" alt="..."></img>
+                            <img src="https://i.ibb.co/DkRTbYN/image-part-001.jpg" className="d-block w-100" alt="..."></img>
                         </div>
                         <div class="carousel-item">
                             <img src="https://i.ibb.co/GkQbTSY/beads.jpg" className="d-block w-100" alt="..."></img>
