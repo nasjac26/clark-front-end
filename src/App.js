@@ -14,6 +14,7 @@ import ClassContainer from "./components/ClassContainer";
 
 
 function App() {
+  const [reload, setReload] = useState(false)
   const [user, setUser ] = useState("");
   const [hairExtensionList, sethairextensionList] = useState([])
   const [isSignedIn, setIsSignedIn] = useState(false)
@@ -22,9 +23,18 @@ function App() {
   const [classList, setClassList] = useState("")
 
 
-  const url = `http://localhost:3001/`
+  const url = `https://clarks-backend.herokuapp.com/`
 
   
+  useEffect(() => {
+    // auto-login
+    fetch("/me").then((r) => {
+      if (r.ok) {
+        r.json().then((user) => console.log(user));
+      }
+    });
+  }, []);
+//
 
    //fetching hair extensions from api inventory
   useEffect(() => {
@@ -44,8 +54,16 @@ function App() {
   useEffect(() => {
       fetch(url + "events")
       .then(response => response.json())
-      .then(data => setClassList(data))
+      .then(data => checkIfClassesExists(data))
   }, [])
+
+  useEffect(() => {
+    fetch(url + "licensed_tools")
+      .then(response => response.json())
+      .then(data => console.log(data))
+  }, [])
+      
+            
 
 
 function checkIfToolsExists(data) {
@@ -60,6 +78,12 @@ function checkIfHairProductsExists(data) {
   }
 }
 
+function checkIfClassesExists(data) {
+  if (!!data) {
+      setClassList(data)
+  }
+}
+
   return (
     <BrowserRouter>
     <Navbar  user={user} setUser={setUser}/>
@@ -67,7 +91,7 @@ function checkIfHairProductsExists(data) {
       <Routes>
         <Route path="/" element={<Home user={user} toolList={toolList} />}/>
         <Route path="/signup" element={<Signup setUser={setUser} user={user} isSignedIn={isSignedIn} setIsSignedIn={setIsSignedIn} />}/>
-        <Route path="/signin" element={<Signin setUser={setUser} user={user} isSignedIn={isSignedIn} setIsSignedIn={setIsSignedIn} />}/>
+        <Route path="/signin" element={<Signin setUser={setUser} user={user} isSignedIn={isSignedIn} setIsSignedIn={setIsSignedIn} setToolList={setToolList} />}/>
         {/* Disabled until ready to sell */}
         {/* <Route path="/products" element={<ProductContainer hairExtensionList={hairExtensionList} sethairextensionList={sethairextensionList} />}/> */}
         <Route path="/tools" element={<ToolsContainer toolList={toolList} setToolList={setToolList} />}/>

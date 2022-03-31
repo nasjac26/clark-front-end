@@ -49,8 +49,6 @@ function HairExtensionContainer({ hairextensionList, sethairextensionList }) {
         return hairextensionList.map(hairextension => {
             return (
                     <Col>
-                                        {console.log("not searching")}
-
                         <HairExtensionCard 
                             key={hairextension.id}
                             id={hairextension.id}

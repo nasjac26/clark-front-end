@@ -11,7 +11,7 @@ function AdminCreateClass(props) {
     const [stock, setStock ] = useState("")
     const [time, setTime ] = useState("")
 
-    let url = `http://localhost:3001/events`
+    let url = `https://clarks-backend.herokuapp.com/events`
 
     function handleSubmit(event) {
         event.preventDefault();

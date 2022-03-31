@@ -7,7 +7,7 @@ function AdminApproval(props) {
   const [customers, setCustomers] = useState([])
   
   useEffect(() => {
-    fetch("http://localhost:3001/users")
+    fetch("https://clarks-backend.herokuapp.com/")
     .then(response => response.json())
     .then(data => checkIfCustomersExists(data))
   }, []);
