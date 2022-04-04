@@ -104,13 +104,12 @@ function ClassInformation() {
                     </div>
                     <div>
                         <img src="https://i.ibb.co/G90p3Rj/tool-kit-open.jpg" className="container m-4 img-fluid"/>
-                        <img src="https://i.ibb.co/G90p3Rj/tool-kit-open.jpg" className="container m-4 img-fluid"/>
                     </div>
                 </div>
                 <div className="m-5 text-center">
                     <h1><ul><b>Perks</b></ul></h1>
                     <h4>Certification of Completion</h4>
-                    <h4><b>Exclusive</b> access to our private alumni Instagram account full of tips, tricks, and videos to keep up to date on techniques. The contrinued education we provide never ends!</h4>
+                    <h4><b>Exclusive</b> access to our private alumni Instagram account full of tips, tricks, and videos to keep up to date on techniques. The continued education we provide never ends!</h4>
                     <h4>Be listed in our database as a featured extension stylist in your city</h4>
                     <h4>Be the first to know about exclusive student discounts or promos on our products </h4>
                 </div>

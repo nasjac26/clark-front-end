@@ -6,7 +6,6 @@ import Row from 'react-bootstrap/Row'
 
 
 function AdminClassList({classList}) {
-
     const classListFactory = () => {
         return classList.map(e => {
             return (
@@ -29,7 +28,7 @@ function AdminClassList({classList}) {
     return (
         <div className="container-fluid">
             <Row>
-            {classListFactory()}   
+            {classList && classListFactory()}   
             </Row>     
         </div>
     )

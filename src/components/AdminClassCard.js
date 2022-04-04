@@ -9,7 +9,7 @@ import Col from 'react-bootstrap/Col'
 const AdminClassCard = (props) => { 
 
     function handleDeleteClick() {
-        fetch(`https://clarks-backend.herokuapp.com/${props.id}`, {
+        fetch(`https://clarks-backend.herokuapp.com/events/${props.id}`, {
             method: "DELETE",
         }).then(props.setClassList(props.classList.filter(e => e.id != props.id)));
         alert("Removed! Will reflect after page refresh and relogin.")

@@ -19,11 +19,6 @@ function AdminProductCard(props) {
                 "Content-Type": "application/json",
             },
             body: JSON.stringify({ stock }),
-        }).then((response) => {
-            if (response.ok) {
-                console.log("good job!", stock)
-            }
-            
         });
         alert("Stock updated");   
         navigate('/admin-tools');

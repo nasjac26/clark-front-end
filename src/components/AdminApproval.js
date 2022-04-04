@@ -7,7 +7,7 @@ function AdminApproval(props) {
   const [customers, setCustomers] = useState([])
   
   useEffect(() => {
-    fetch("https://clarks-backend.herokuapp.com/")
+    fetch("https://clarks-backend.herokuapp.com/users")
     .then(response => response.json())
     .then(data => checkIfCustomersExists(data))
   }, []);
@@ -40,7 +40,7 @@ function AdminApproval(props) {
         <div>
           <div className='container p-5'>
             <h1 className='d-flex justify-content-center'>Admin Approval</h1>
-            {userListFactory()}
+            {/* {userListFactory()} */}
           </div>
         </div>
     )

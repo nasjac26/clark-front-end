@@ -57,11 +57,11 @@ function App() {
       .then(data => checkIfClassesExists(data))
   }, [])
 
-  useEffect(() => {
-    fetch(url + "licensed_tools")
-      .then(response => response.json())
-      .then(data => console.log(data))
-  }, [])
+  // useEffect(() => {
+  //   fetch(url + "licensed_tools")
+  //     .then(response => response.json())
+  //     .then(data => console.log(data))
+  // }, [])
       
             
 
