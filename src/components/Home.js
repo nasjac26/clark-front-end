@@ -4,6 +4,7 @@ function Home(props) {
     return (
         <div className="">
             <div className="m-5 text-justify">
+                <h1 className="d-flex justify-content-center">Site Under Matinence for Google Analytics Review</h1>
                 <h1 className="d-flex justify-content-center">ELEVATE YOUR ARTISTRY</h1>
                 <p className="d-flex justify-content-center">your career starts here</p>
 

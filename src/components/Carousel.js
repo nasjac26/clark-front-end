@@ -12,12 +12,12 @@ function Carousel() {
                         <div class="carousel-item active">
                             <img src="https://i.ibb.co/GkQbTSY/beads.jpg" className="d-block w-100" alt="..."></img>
                         </div>
-                        <div class="carousel-item">
+                        {/* <div class="carousel-item">
                             <img src="https://i.ibb.co/DkRTbYN/image-part-001.jpg" className="d-block w-100" alt="..."></img>
                         </div>
                         <div class="carousel-item">
                             <img src="https://i.ibb.co/GkQbTSY/beads.jpg" className="d-block w-100" alt="..."></img>
-                        </div>
+                        </div> */}
                     </div>
                     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
