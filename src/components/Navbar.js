@@ -46,9 +46,9 @@ const url = `https://clarks-backend.herokuapp.com/logout`
                     {/* Disabled until ready to sell */}
                     {/* <NavLink className="nav-link" to="/products">Shop Hair Extensions</NavLink> */}
                     <NavLink className="nav-link text-secondary" to="/tools">Shop Tools</NavLink>        
-                    {/* {!user.admin === true ? null : showAdminTools()} */}
+                    {!user.admin === true ? null : showAdminTools()}
                     <NavLink className="nav-link text-secondary" to="/classes">Education</NavLink>
-                    {/* {!user ? showLoginButton() : showLogoutButton()} */}
+                    {!user ? showLoginButton() : showLogoutButton()}
                     <a class="bi bi-basket"></a>
                     <a href="#" class="snipcart-checkout nav-link text-secondary">Cart</a>
 
