@@ -114,6 +114,7 @@ function ClassInformation() {
                     <h4>Be the first to know about exclusive student discounts or promos on our products </h4>
                 </div>
                 <div className="m-5 text-center">
+                    <h1><ul><b>_____________</b></ul></h1>
                     <h4>Our goal is that you will leave with all of the skill and confidence needed to jumpstart your career today. Believe in yourself and invest in your education with a hands on, carefully crafted course by Clark & Lana</h4>
                     <h4>To enroll, please select a course below, or contact us with any questions!</h4>
                     <h3>- Clark and Lana</h3>

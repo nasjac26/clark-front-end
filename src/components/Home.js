@@ -35,7 +35,7 @@ function Home(props) {
 
             <div className="bg-secondary bg-gradient text-light d-flex justify-content-center p-5">
                 <div>
-                    <h3 className="">Licensed? Email us at phaneshairextensions@gmail.com </h3>
+                    <h3 className="">Questions? Email us at phaneshairextensions@gmail.com </h3>
                     <h3 className="">Follow us on <a className="text-light" href="https://www.instagram.com/lanaphan_/">instagram</a></h3>  
                 </div>
             </div>
