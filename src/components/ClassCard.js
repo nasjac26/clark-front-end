@@ -14,7 +14,7 @@ const ClassCard = (props) => {
                 <Col className="container">
                     <Card className="shadow bg-body rounded">
                         <Card.Body className="">
-                            <Card.Title className="d-flex justify-content-center">{e.name}</Card.Title>
+                            {/* <Card.Title className="d-flex justify-content-center">{e.name}</Card.Title> */}
                             <Card.Text className="d-flex justify-content-center">
                                 ${e.price}
                             </Card.Text>
@@ -24,14 +24,14 @@ const ClassCard = (props) => {
                             <Card.Text className="d-flex justify-content-center">
                                 Location of Class: 
                             </Card.Text>
-                            <Card.Text className="d-flex justify-content-around">
+                            {/* <Card.Text className="d-flex justify-content-around">
                                 {e.location}
-                            </Card.Text>
-                            <Card.Text className="d-flex justify-content-center">
+                            </Card.Text> */}
+                            {/* <Card.Text className="d-flex justify-content-center">
                                 Time of class: 
-                            </Card.Text>
+                            </Card.Text> */}
                             <Card.Text className="d-flex justify-content-around">
-                                {e.time}
+                                10AM - 6PM
                             </Card.Text>
                             <Container className="d-flex justify-content-center">
                                 <Button
