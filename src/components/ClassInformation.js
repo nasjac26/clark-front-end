@@ -113,6 +113,11 @@ function ClassInformation() {
                     <h4>Be listed in our database as a featured extension stylist in your city</h4>
                     <h4>Be the first to know about exclusive student discounts or promos on our products </h4>
                 </div>
+                <div className="m-5 text-center">
+                    <h4>Our goal is that you will leave with all of the skill and confidence needed to jumpstart your career today. Believe in yourself and invest in your education with a hands on, carefully crafted course by Clark & Lana</h4>
+                    <h4>To enroll, please select a course below, or contact us with any questions!</h4>
+                    <h3>- Clark and Lana</h3>
+                </div>
             </div>
         )
     }
