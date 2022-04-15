@@ -14,16 +14,16 @@ const ClassCard = (props) => {
                 <Col className="container">
                     <Card className="shadow bg-body rounded">
                         <Card.Body className="">
-                            {/* <Card.Title className="d-flex justify-content-center">{e.name}</Card.Title> */}
+                            <Card.Title className="d-flex justify-content-center">{e.name}</Card.Title>
                             <Card.Text className="d-flex justify-content-center">
                                 ${e.price}
                             </Card.Text>
                             <Card.Text className="d-flex justify-content-center">
                                 {e.date}
                             </Card.Text>
-                            <Card.Text className="d-flex justify-content-center">
+                            {/* <Card.Text className="d-flex justify-content-center">
                                 Location of Class: 
-                            </Card.Text>
+                            </Card.Text> */}
                             {/* <Card.Text className="d-flex justify-content-around">
                                 {e.location}
                             </Card.Text> */}
