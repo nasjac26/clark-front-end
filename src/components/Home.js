@@ -4,7 +4,7 @@ function Home(props) {
     return (
         <div className="">
             <div className="m-5 text-justify">
-                <h1 className="d-flex justify-content-center">ELEVATE YOUR ARTISTRY</h1>
+                <h3 className="d-flex justify-content-center">ELEVATE YOUR ARTISTRY</h3>
                 <p className="d-flex justify-content-center">your career starts here</p>
 
             </div>
@@ -12,7 +12,7 @@ function Home(props) {
                 <Carousel toolList={props.toolList} />
             </div>
             
-            <div className="bg-secondary bg-gradient text-light d-flex justify-content-center">
+            <div className="bg-secondary bg-gradient text-light d-flex justify-content-center p-3">
                 <div>
                     <h1>Redefining the standard when it comes to hair extensions. Made by stylists for stylists.</h1>  
                 </div>
@@ -33,7 +33,7 @@ function Home(props) {
                 </div>                
             </div>
 
-            <div className="bg-secondary bg-gradient text-light d-flex justify-content-center p-5">
+            <div className="bg-secondary bg-gradient text-light d-flex justify-content-center p-3">
                 <div>
                     <h3 className="">Questions? Email us at phaneshairextensions@gmail.com </h3>
                     <h3 className="">Follow us on <a className="text-light" href="https://www.instagram.com/lanaphan_/">instagram</a></h3>  
